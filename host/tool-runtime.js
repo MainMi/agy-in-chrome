@@ -1,4 +1,4 @@
-// Shared runtime for open-claude-in-chrome tools.
+// Shared runtime for agy-in-chrome tools.
 //
 // Joins the browser bridge as a client and exposes a single
 // `callTool(name, args)` entry point. The bridge is owned by the native host,
@@ -7,7 +7,7 @@
 //
 // It used to be far more than this: every consumer raced to bind a TCP port,
 // and the winner multiplexed all the others through itself. That made an
-// ordinary Claude Code session load-bearing for the whole machine. All of it —
+// ordinary AGY session load-bearing for the whole machine. All of it —
 // the election, the yield protocol, the peer-classification sniff, the
 // self-promotion path, the pidfile — existed to manage a role nobody should
 // have had, and went away with it.
@@ -51,12 +51,12 @@ const HOST_DROPPED_ERROR =
 
 const NO_BRIDGE_ERROR =
   "Browser extension is not connected. Make sure a supported Chromium browser " +
-  "is running with the Open Claude in Chrome extension installed and enabled.";
+  "is running with the AGY in Chrome extension installed and enabled.";
 
 // Unsolicited upstream events from the extension (not tool responses): the
 // imitation-learning recorder posts { type: "recording_complete", ... } when
 // a recording finishes. Subscribers (the channel-enabled MCP server) get
-// notified so they can inject a channel event into the Claude Code session.
+// notified so they can inject a channel event into the AGY session.
 const recordingEventSubscribers = new Set();
 export function onRecordingEvent(cb) {
   recordingEventSubscribers.add(cb);

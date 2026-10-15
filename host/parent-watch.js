@@ -36,7 +36,7 @@ function recordExit(reason) {
     const file = path.join(
       os.homedir(),
       ".config",
-      "open-claude-in-chrome",
+      "agy-in-chrome",
       "server-exits.log"
     );
     fs.mkdirSync(path.dirname(file), { recursive: true });

@@ -30,7 +30,7 @@ fi
 EXTENSION_IDS=("$@")
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 HOST_DIR="$SCRIPT_DIR/host"
-HOST_NAME="com.anthropic.open_claude_in_chrome"
+HOST_NAME="com.antigravity.agy_in_chrome"
 
 # Platform detection. Windows is reached when the script runs under Git Bash,
 # MSYS2, or Cygwin (uname reports MINGW*/MSYS*/CYGWIN*).
@@ -82,7 +82,7 @@ generate_manifest() {
   cat << EOF
 {
   "name": "$HOST_NAME",
-  "description": "Open Claude in Chrome Native Messaging Host",
+  "description": "AGY in Chrome Native Messaging Host",
   "path": "$1",
   "type": "stdio",
   "allowed_origins": [$ORIGINS

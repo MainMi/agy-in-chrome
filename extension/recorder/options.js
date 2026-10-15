@@ -367,7 +367,7 @@ document.getElementById("sessions").addEventListener("click", (e) => {
         : "";
     const ref = p
       ? `Read the browser recording at ${p} — an imitation-learning rollout of an expert doing a task. trace.json holds four tracks on one shared clock (behavior, cursor, images, narration); SCHEMA_v0.md in that folder is the field reference, and images/ holds the frames.${warn}`
-      : `Recording ${rid} was not written to disk; open it in the Open Claude in Chrome extension Options to inspect.`;
+      : `Recording ${rid} was not written to disk; open it in the AGY in Chrome extension Options to inspect.`;
     navigator.clipboard.writeText(ref).then(() => {
       copyBtn.textContent = "Copied";
       setTimeout(() => (copyBtn.textContent = "Copy reference"), 1500);

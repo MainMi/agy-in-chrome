@@ -147,7 +147,7 @@ async function main() {
   });
 
   const server = new Server(
-    { name: "open-claude-in-chrome-hybrid", version: "1.0.0" },
+    { name: "agy-in-chrome-hybrid", version: "1.0.0" },
     {
       capabilities: {
         tools: {},

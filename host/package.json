@@ -1,8 +1,8 @@
 {
-  "name": "open-claude-in-chrome-host",
+  "name": "agy-in-chrome-host",
   "version": "1.0.0",
   "private": true,
-  "description": "MCP server and native messaging host for Open Claude in Chrome",
+  "description": "MCP server and native messaging host for AGY in Chrome",
   "type": "module",
   "scripts": {
     "test": "node test/endpoint.test.mjs && node test/parent-watch.test.mjs && node test/ownership.test.mjs"

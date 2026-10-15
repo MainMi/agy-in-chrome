@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-// MCP Server for Open Claude in Chrome extension.
-// Started by Claude Code via stdio MCP transport.
+// MCP Server for AGY in Chrome extension.
+// Started by AGY via stdio MCP transport.
 //
 // All of the actual runtime logic (joining the browser bridge, framing,
 // request routing) lives in host/tool-runtime.js so the codemode + hybrid
@@ -37,7 +37,7 @@ watchParent(() => exitClean());
 await init();
 
 const server = new McpServer({
-  name: "open-claude-in-chrome",
+  name: "agy-in-chrome",
   version: "1.0.0"
 });
 

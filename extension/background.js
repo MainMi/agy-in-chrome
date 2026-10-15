@@ -1,4 +1,4 @@
-// Background service worker for Open Claude in Chrome extension.
+// Background service worker for AGY in Chrome extension.
 // Handles: native messaging, CDP via chrome.debugger, tool dispatch, tab group management.
 
 import * as humanize from "./humanize/index.js";
@@ -9,7 +9,7 @@ self.addEventListener("unhandledrejection", (event) => {
   event.preventDefault();
 });
 
-const NATIVE_HOST_NAME = "com.anthropic.open_claude_in_chrome";
+const NATIVE_HOST_NAME = "com.antigravity.agy_in_chrome";
 
 // --- State ---
 let nativePort = null;
@@ -275,7 +275,7 @@ async function ensureTabGroup(createIfEmpty) {
   const win = await chrome.windows.create({ focused: false, url: "about:blank" });
   const tab = win.tabs[0];
   const groupId = await chrome.tabs.group({ tabIds: [tab.id] });
-  await chrome.tabGroups.update(groupId, { title: "MCP", color: "blue" });
+  await chrome.tabGroups.update(groupId, { title: "AGY", color: "blue" });
   tabGroupId = groupId;
   tabGroupTabs = new Set([tab.id]);
 }
@@ -893,7 +893,7 @@ const CONFIG_SCHEMA = {
     "Passively record what this agent does in the browser, so a person can watch " +
     "it back. \"off\" (default) records nothing and costs nothing. \"audit\" " +
     "starts an rrweb DOM recording in each tab the first time an action touches " +
-    "it, and stitches those into one timeline per Claude Code session, viewable " +
+    "it, and stitches those into one timeline per AGY session, viewable " +
     "under Audits on the extension's options page. Recording runs in the " +
     "extension's isolated world, so the page cannot observe it, and captures DOM " +
     "rather than pixels — video and canvas content are not captured. This is a " +
@@ -1785,7 +1785,7 @@ const toolHandlers = {
     });
 
     let tree = resp?.result || "Error: Could not generate accessibility tree";
-    // Append viewport dimensions so Claude knows the coordinate space
+    // Append viewport dimensions so AGY knows the coordinate space
     try {
       await ensureAttached(tabId);
       const vp = await cdp(tabId, "Runtime.evaluate", {
@@ -2852,7 +2852,7 @@ function scheduleBadgeClear() {
     resultClearTimer = null;
     if (recorder.epoch === ep && !recorder.active && !recorder.busy) {
       chrome.action.setBadgeText({ text: "" });
-      chrome.action.setTitle({ title: "Open Claude in Chrome — click to start/stop recording" });
+      chrome.action.setTitle({ title: "AGY in Chrome — click to start/stop recording" });
     }
   }, 4000);
 }
@@ -2861,7 +2861,7 @@ function showResultBadge(kind, detail) {
     chrome.action.setBadgeText({ text: "✗" });
     chrome.action.setBadgeBackgroundColor({ color: "#d23b2e" });
     chrome.action.setTitle({
-      title: "Could not save the recording — is the native host installed? Run ./install.sh."
+      title: "Could not save the recording — is the native host installed? Run register-host.ps1."
     });
   } else if (kind === "no_transcript") {
     // The recording IS saved — but its narration is missing or partial, which
@@ -2873,12 +2873,12 @@ function showResultBadge(kind, detail) {
       title: `Recording saved WITHOUT narration — ${detail}. Reference copied; the audio is on disk in audio/.`
     });
   } else {
-    // "copied" — the reference is on your clipboard. Delivery-to-Claude info
+    // "copied" — the reference is on your clipboard. Delivery-to-AGY info
     // arrives later and updates the TOOLTIP only (see stopRecording).
     chrome.action.setBadgeText({ text: "📋" });
     chrome.action.setBadgeBackgroundColor({ color: "#0e8a5f" });
     chrome.action.setTitle({
-      title: "Recording saved · reference copied to clipboard — paste it into Claude Code."
+      title: "Recording saved · reference copied to clipboard — paste it into AGY."
     });
   }
   scheduleBadgeClear();
@@ -3030,21 +3030,21 @@ async function stopRecording() {
   chrome.runtime
     .sendMessage({ __ocic_offscreen: true, cmd: "set_path", recording_id: bundle.recording_id, path })
     .catch(() => {});
-  // 3) Notify Claude (best-effort); append delivery to the tooltip when it resolves.
+  // 3) Notify AGY (best-effort); append delivery to the tooltip when it resolves.
   // Delivery confirmation can arrive up to ~12s later. It must NEVER repaint
   // the badge (a new recording may be underway by then) — tooltip only, and
   // only while this stop is still the latest transition.
-  const connectionState = await notifyClaude(bundle, path);
+  const connectionState = await notifyAgent(bundle, path);
   if (live() && !recorder.active && !recorder.busy) {
     const deliv =
       connectionState === "delivered"
-        ? " Also delivered to Claude Code."
+        ? " Also delivered to AGY."
         : connectionState === "sent_unconfirmed"
-          ? " Sent to Claude — delivery not confirmed."
-          : " No Claude Code session connected.";
+          ? " Sent to AGY — delivery not confirmed."
+          : " No AGY session connected.";
     const head =
       transcriptStatus === "ok"
-        ? "Recording saved · reference copied to clipboard — paste it into Claude Code."
+        ? "Recording saved · reference copied to clipboard — paste it into AGY."
         : `Recording saved WITHOUT narration — ${transcriptStatus}. Reference copied (it says so); audio is on disk in audio/.`;
     chrome.action.setTitle({ title: head + deliv });
   }
@@ -3125,9 +3125,9 @@ async function getSchemaMd() {
 }
 
 // Fire recording_complete upstream (→ native host → TCP → MCP server → channel
-// notification). Then wait briefly for Claude's recording_ack to know delivery
+// notification). Then wait briefly for AGY's recording_ack to know delivery
 // (§4). The native-host heartbeat tells us if any session is connected at all.
-async function notifyClaude(bundle, path) {
+async function notifyAgent(bundle, path) {
   if (!nativePort) return "no_session"; // native host not connected
   try {
     nativePort.postMessage({
@@ -3293,7 +3293,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 // Recover MCP tab group state after service worker restart
 async function recoverTabGroupState() {
   try {
-    const groups = await chrome.tabGroups.query({ title: "MCP" });
+    const groups = await chrome.tabGroups.query({ title: "AGY" });
     if (groups.length > 0) {
       tabGroupId = groups[0].id;
       const tabs = await chrome.tabs.query({ groupId: tabGroupId });

@@ -1,4 +1,4 @@
-// The 25 open-claude-in-chrome tool definitions, extracted as data so both
+// The 25 agy-in-chrome tool definitions, extracted as data so both
 // the standard stdio MCP server (host/mcp-server.js) and the codemode +
 // hybrid servers can register them without duplicating the schemas.
 //
@@ -175,7 +175,7 @@ export const TOOLS = [
         .boolean()
         .optional()
         .describe(
-          "Optional, for the `screenshot` and `zoom` actions. Set true to write the captured image to disk (under ~/.config/open-claude-in-chrome/screenshots/) and return its absolute path in the result so it can be opened or shared. Default false."
+          "Optional, for the `screenshot` and `zoom` actions. Set true to write the captured image to disk (under ~/.config/agy-in-chrome/screenshots/) and return its absolute path in the result so it can be opened or shared. Default false."
         )
     }
   },
@@ -276,7 +276,7 @@ export const TOOLS = [
           showWatermark: z
             .boolean()
             .optional()
-            .describe("Show Claude logo watermark (default: true)"),
+            .describe("Show AGY watermark (default: true)"),
           quality: z
             .number()
             .optional()

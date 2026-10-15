@@ -80,7 +80,7 @@ async function main() {
   });
 
   const server = new McpServer(
-    { name: "open-claude-in-chrome-codemode", version: "1.0.0" },
+    { name: "agy-in-chrome-codemode", version: "1.0.0" },
     { instructions: SERVER_INSTRUCTIONS }
   );
 

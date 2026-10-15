@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Open Claude in Chrome",
+  "name": "AGY in Chrome",
   "version": "1.0.0",
-  "description": "Claude in Chrome, open source. No domain blocklist. Any Chromium browser.",
+  "description": "Browser automation bridge for AGY (Antigravity). Direct Chrome integration.",
   "minimum_chrome_version": "116",
   "permissions": [
     "tabs",
@@ -25,7 +25,7 @@
     "type": "module"
   },
   "action": {
-    "default_title": "Open Claude in Chrome \u2014 click to start/stop recording"
+    "default_title": "AGY in Chrome \u2014 click to start/stop recording"
   },
   "options_page": "recorder/options.html",
   "content_scripts": [
