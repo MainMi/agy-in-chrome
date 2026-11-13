@@ -34,7 +34,9 @@
         "<all_urls>"
       ],
       "js": [
-        "content.js"
+        "content.js",
+        "content-query.js",
+        "content-point.js"
       ],
       "run_at": "document_idle",
       "all_frames": false
@@ -44,7 +46,8 @@
         "<all_urls>"
       ],
       "js": [
-        "recorder/capture.js"
+        "recorder/capture.js",
+        "recorder/capture-events.js"
       ],
       "run_at": "document_start",
       "all_frames": true

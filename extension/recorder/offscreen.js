@@ -36,93 +36,14 @@ const AUDIO_BITRATE = 32000;
 // is not released, there is no permission re-prompt, and the operator sees
 // nothing. The boundary costs one or two Opus frames (~20-60ms).
 const SEGMENT_MS = 10 * 60 * 1000;
-
-let db = null;
 let mediaRecorder = null;
 let micStream = null;
 let segmentTimer = null;
 let stopping = false;
-let session = null; // { recording_id, started_at, segments, apiKey, url0 }
-let pendingStop = null; // { recording_id, trace, segBlobs } between stop and transcribe
-
-// ---- IndexedDB (durable buffer) -------------------------------------------
-function openDb() {
-  return new Promise((resolve, reject) => {
-    const req = indexedDB.open("ocic-recorder", 3);
-    req.onupgradeneeded = () => {
-      const d = req.result;
-      if (!d.objectStoreNames.contains("events"))
-        d.createObjectStore("events", { keyPath: "seq", autoIncrement: true });
-      if (!d.objectStoreNames.contains("audio"))
-        d.createObjectStore("audio", { keyPath: "seq", autoIncrement: true });
-      if (!d.objectStoreNames.contains("sessions"))
-        d.createObjectStore("sessions", { keyPath: "recording_id" });
-      if (!d.objectStoreNames.contains("cursor"))
-        d.createObjectStore("cursor", { keyPath: "seq", autoIncrement: true });
-      if (!d.objectStoreNames.contains("images"))
-        d.createObjectStore("images", { keyPath: "seq", autoIncrement: true });
-    };
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => reject(req.error);
-  });
-}
-function put(store, value) {
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction(store, "readwrite");
-    tx.objectStore(store).add(value);
-    tx.oncomplete = resolve;
-    tx.onerror = () => reject(tx.error);
-  });
-}
-// add() throws on a duplicate key; the session record is written once at stop
-// and again after transcription, so that one needs an upsert.
-function putRecord(store, value) {
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction(store, "readwrite");
-    tx.objectStore(store).put(value);
-    tx.oncomplete = resolve;
-    tx.onerror = () => reject(tx.error);
-  });
-}
-function getAll(store) {
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction(store, "readonly");
-    const req = tx.objectStore(store).getAll();
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => reject(req.error);
-  });
-}
-function getRow(store, key) {
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction(store, "readonly");
-    const req = tx.objectStore(store).get(key);
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => reject(req.error);
-  });
-}
-function clearStore(store) {
-  return new Promise((resolve) => {
-    const tx = db.transaction(store, "readwrite");
-    tx.objectStore(store).clear();
-    tx.oncomplete = resolve;
-  });
-}
-function patchSession(recording_id, patch) {
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction("sessions", "readwrite");
-    const store = tx.objectStore("sessions");
-    const get = store.get(recording_id);
-    get.onsuccess = () => {
-      const rec = get.result;
-      if (rec) {
-        Object.assign(rec, patch);
-        store.put(rec);
-      }
-      resolve(!!rec);
-    };
-    get.onerror = () => reject(get.error);
-  });
-}
+export let session = null; // { recording_id, started_at, segments, apiKey, url0 }
+// { recording_id, trace, segBlobs } between stop and transcribe — shared with
+// offscreen-transcription.js, which clears it once transcription finishes.
+export const rec = { pendingStop: null };
 
 // ---- audio segments --------------------------------------------------------
 // Start a new encoder over the SAME live MediaStream and stamp its wall-clock
@@ -172,13 +93,13 @@ async function startRecording(cmd) {
       session: { recording_id: session.recording_id, started_at: session.started_at }
     };
   }
-  db = db || (await openDb());
+  await ensureDb();
   await clearStore("events");
   await clearStore("audio");
   await clearStore("cursor");
   await clearStore("images");
   stopping = false;
-  pendingStop = null;
+  rec.pendingStop = null;
   session = {
     recording_id: cmd.recording_id,
     started_at: cmd.started_at, // epoch ms — shared clock zero
@@ -308,7 +229,7 @@ async function stopRecording() {
   trace.ended_at = Date.now();
   trace.transcript_status = "pending";
 
-  pendingStop = {
+  rec.pendingStop = {
     recording_id: s.recording_id,
     apiKey: s.apiKey,
     trace,
@@ -321,7 +242,7 @@ async function stopRecording() {
   // never runs (SW evicted, browser closed), the viewer still shows the
   // session — saying plainly that the transcript never completed, rather
   // than the session vanishing from the list.
-  await writeSessionRecord(pendingStop, "pending: transcription did not finish");
+  await writeSessionRecord(rec.pendingStop, "pending: transcription did not finish");
 
   return {
     ok: true,
@@ -340,202 +261,11 @@ async function stopRecording() {
   };
 }
 
-function audioName(index) {
-  return `audio/${String(index).padStart(3, "0")}.webm`;
-}
+import { ensureDb, patchSession } from "./offscreen-db.js";
+import { audioSlice, transcribeRecording, retranscribe } from "./offscreen-transcription.js";
+import { copyText, writeSessionRecord } from "./offscreen-save.js";
+import { audioName } from "./offscreen-transcription.js";
 
-// Hand a slice of one segment's bytes to the SW as base64, so it can be
-// written to disk through the native host. Sliced because runtime messages
-// are JSON and a whole segment would make an unreasonably large one.
-function audioSlice(msg) {
-  const seg = pendingStop && pendingStop.segBlobs.find((x) => x.index === msg.index);
-  if (!seg) return Promise.resolve({ ok: false, error: "no such segment" });
-  return new Promise((resolve) => {
-    const fr = new FileReader();
-    fr.onload = () => {
-      const s = String(fr.result);
-      resolve({ ok: true, b64: s.slice(s.indexOf(",") + 1) });
-    };
-    fr.onerror = () => resolve({ ok: false, error: String(fr.error) });
-    fr.readAsDataURL(seg.blob.slice(msg.start, msg.start + msg.len));
-  });
-}
-
-// Transcribe every segment, then merge onto the shared clock. Each segment is
-// mapped through its OWN epoch anchor, so one failed or slow segment shifts
-// nothing around it — a failure is a hole, never a drift.
-async function transcribeRecording() {
-  if (!pendingStop) return { ok: false, error: "nothing to transcribe" };
-  const { trace, segBlobs, apiKey, recording_id, imageRows } = pendingStop;
-
-  const { status } = await runTranscription(segBlobs, apiKey, trace);
-
-  await writeSessionRecord(pendingStop, status);
-  pendingStop = null;
-  return {
-    ok: true,
-    cognitive: trace.cognitive,
-    transcript_status: status,
-    transcript_segments: trace.transcript_segments,
-    summary: buildSummary(trace)
-  };
-}
-
-// Shared transcription core: run whisper over each segment, map onto the shared
-// clock, and fold statuses into the trace. Used at stop (in-memory segBlobs)
-// and on retry (segments rebuilt from IndexedDB). Only mutates the passed
-// trace — persistence is the caller's job.
-async function runTranscription(segBlobs, apiKey, trace) {
-  const segStatuses = [];
-  let cognitive = [];
-  for (const seg of segBlobs) {
-    const t0 = seg.startEpoch - trace.started_at;
-    try {
-      const r = await transcribe(seg.blob, apiKey, { filename: `${seg.index}.webm` });
-      cognitive = cognitive.concat(
-        segmentsToCognitive(r.segments, seg.startEpoch, trace.started_at)
-      );
-      segStatuses.push({ index: seg.index, t: t0, status: "ok" });
-    } catch (err) {
-      segStatuses.push({ index: seg.index, t: t0, status: `failed: ${err.message}` });
-    }
-  }
-  cognitive.sort((a, b) => a.t - b.t || a.end - b.end);
-
-  const failed = segStatuses.filter((x) => x.status !== "ok");
-  let status;
-  if (!segStatuses.length) status = "failed: no audio was captured";
-  else if (!failed.length) status = "ok";
-  else if (failed.length === segStatuses.length) status = failed[0].status;
-  else
-    status = `partial: ${failed.length} of ${segStatuses.length} audio segments failed — ${failed[0].status.replace(/^failed: /, "")}`;
-
-  trace.cognitive = cognitive;
-  trace.transcript_status = status;
-  trace.transcript_segments = segStatuses;
-  return { cognitive, status, segStatuses };
-}
-
-// Re-run transcription for a saved recording whose transcript failed at stop.
-// The durable segment bytes live in IndexedDB until the next recording starts,
-// and the per-segment epoch anchors persisted in the session record map them
-// onto the same shared clock. The SW writes the patched trace to disk.
-async function retranscribe(recording_id, apiKey) {
-  db = db || (await openDb());
-  const row = await getRow("sessions", recording_id);
-  if (!row || !row.trace) return { ok: false, error: "no such recording" };
-  if (!row.segEpochs || !row.segEpochs.length)
-    return { ok: false, error: "recording predates this retry path (missing segment anchors)" };
-
-  // Only this recording's own audio. The store also holds any NEWER recording's
-  // bytes until that one starts recording clears it, so without the filter a
-  // retranscribe of an older recording would transcribe the wrong audio and
-  // overwrite the older recording's trace.json with a mismatched transcript.
-  // (A pre-fix target row has no recording_id and is filtered out — safe failure,
-  // and such recordings are already rejected by the segEpochs guard above.)
-  const audioRows = (await getAll("audio")).filter((r) => r.recording_id === recording_id);
-  const bySeg = new Map();
-  for (const r of audioRows) {
-    const k = r.seg ?? 0;
-    if (!bySeg.has(k)) bySeg.set(k, []);
-    bySeg.get(k).push(r.bytes);
-  }
-  const segBlobs = row.segEpochs
-    .map((e) => ({
-      index: e.index,
-      startEpoch: e.startEpoch,
-      blob: new Blob(bySeg.get(e.index) || [], { type: "audio/webm" })
-    }))
-    .filter((seg) => seg.blob.size > 0);
-  if (!segBlobs.length)
-    return { ok: false, error: "no audio segments remain (a newer recording cleared them)" };
-
-  const trace = row.trace;
-  const { status } = await runTranscription(segBlobs, apiKey, trace);
-  row.trace = trace;
-  row.transcriptStatus = status;
-  row.utterances = (trace.cognitive || []).length;
-  await putRecord("sessions", row);
-  return {
-    ok: true,
-    recording_id,
-    trace,
-    cognitive: trace.cognitive,
-    transcript_status: status,
-    transcript_segments: trace.transcript_segments,
-    summary: buildSummary(trace)
-  };
-}
-
-// The session record the Options viewer renders (progressive disclosure). The
-// full trace (text, small) is kept so the viewer can drill from metadata into
-// the tracks and per-action anchors. Written twice: once at stop, once with
-// the transcript result — so the list is never missing a saved recording.
-async function writeSessionRecord(p, status) {
-  db = db || (await openDb());
-  const { trace, segBlobs, imageRows, recording_id } = p;
-  await putRecord("sessions", {
-    recording_id,
-    started_at: trace.started_at,
-    ended_at: trace.ended_at,
-    url0: trace.url0,
-    events: (trace.behavior || []).length,
-    utterances: (trace.cognitive || []).length,
-    transcriptStatus: status,
-    // Per-segment epoch anchors, so a later retry can re-run transcription and
-    // map the rebuilt track onto the same shared clock.
-    segEpochs: (segBlobs || []).map((x) => ({ index: x.index, startEpoch: x.startEpoch })),
-    trace,
-    // kept for playback in the viewer; the authoritative copy is on disk
-    audio: new Blob(segBlobs.map((x) => x.blob), { type: "audio/webm" }),
-    // 240p frames (dataURL) on the shared clock — the viewer can't read the
-    // on-disk images/ dir, so it shows these; the agent uses the disk files.
-    images: (imageRows || []).map((r) => ({
-      t: r.t - trace.started_at,
-      ref: r.ref,
-      dataUrl: r.dataUrl,
-      w: r.w,
-      h: r.h,
-      vw: r.vw,
-      vh: r.vh
-    }))
-  });
-}
-
-function buildSummary(trace) {
-  const dur = Math.round(((trace.ended_at || 0) - trace.started_at) / 1000);
-  const tabs = new Set(trace.behavior.map((e) => e.tab)).size;
-  const host = (() => {
-    try { return new URL(trace.url0).host; } catch { return "a site"; }
-  })();
-  const utt = (trace.cognitive || []).length;
-  const narration =
-    trace.transcript_status === "ok"
-      ? `${utt} utterance(s)`
-      : `NO usable narration (${trace.transcript_status})`;
-  return `Recording ready: ${dur}s across ${tabs || 1} tab(s) on ${host}, ${narration}.`;
-}
-
-// Copy text to the clipboard on the SW's behalf (the SW has no clipboard).
-// Uses the textarea + execCommand pattern, which works in an offscreen
-// document created with the CLIPBOARD reason + the clipboardWrite permission.
-function copyText(text) {
-  try {
-    const ta = document.createElement("textarea");
-    ta.value = text || "";
-    ta.style.position = "fixed";
-    ta.style.top = "-9999px";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.focus();
-    ta.select();
-    const ok = document.execCommand("copy");
-    ta.remove();
-    return { ok };
-  } catch (e) {
-    return { ok: false, error: String(e && e.message) };
-  }
-}
 
 // ---- message bridge with the service worker -------------------------------
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
@@ -553,7 +283,7 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
       else if (msg.cmd === "retranscribe") sendResponse(await retranscribe(msg.recording_id, msg.apiKey));
       else if (msg.cmd === "copy") sendResponse(copyText(msg.text));
       else if (msg.cmd === "set_path") {
-        db = db || (await openDb());
+        await ensureDb();
         await patchSession(msg.recording_id, { path: msg.path });
         sendResponse({ ok: true });
       } else sendResponse({ ok: false, error: "unknown cmd" });
@@ -563,3 +293,4 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   })();
   return true; // async response
 });
+
