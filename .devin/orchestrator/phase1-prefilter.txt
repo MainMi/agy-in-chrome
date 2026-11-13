@@ -1,0 +1,2270 @@
+=== PHASE 1A: directory map (maxdepth 3)
+.
+./README.md
+./test
+./test/README.md
+./test/audit-segments.test.mjs
+./test/handlers.test.mjs
+./test/humanize-executor.test.mjs
+./test/humanize-planners.test.mjs
+./test/_extract.mjs
+./LICENSE
+./scratch
+./scratch/click-truth
+./scratch/click-truth/index.html
+./scratch/audit-ui
+./scratch/audit-ui/README.md
+./scratch/audit-ui/sync-fixtures.sh
+./scratch/audit-ui/fixtures
+./scratch/audit-ui/index.html
+./scratch/guidance-layers.html
+./scratch/test-form
+./scratch/test-form/index.html
+./scratch/refresh-knobs.html
+./scratch/humanize-probe
+./scratch/humanize-probe/index.html
+./refresh-mcp.sh
+./package-lock.json
+./host
+./host/test
+./host/test/ownership.test.mjs
+./host/test/stress.mjs
+./host/test/watched-child.mjs
+./host/test/endpoint.test.mjs
+./host/test/runtime-client.mjs
+./host/test/parent-watch.test.mjs
+./host/package-lock.json
+./host/parent-watch.js
+./host/mcp-server.js
+./host/codemode
+./host/codemode/server-codemode.js
+./host/codemode/test-hybrid.js
+./host/codemode/server-hybrid.js
+./host/codemode/common.js
+./host/codemode/test-codemode.js
+./host/codemode/worker
+./host/tool-definitions.js
+./host/native-host.js
+./host/tool-runtime.js
+./host/native-host-wrapper.sh
+./host/package.json
+./host/endpoint.js
+./install.sh
+./eslint.config.mjs
+./extension
+./extension/vendor
+./extension/vendor/rrweb-player.min.css
+./extension/vendor/rrweb-player.umd.min.js
+./extension/vendor/rrweb.min.css
+./extension/vendor/rrweb.umd.min.js
+./extension/icons
+./extension/icons/icon128.png
+./extension/icons/icon16.png
+./extension/icons/icon48.png
+./extension/background.js
+./extension/recorder
+./extension/recorder/options.html
+./extension/recorder/offscreen.html
+./extension/recorder/schema.js
+./extension/recorder/transcribe.js
+./extension/recorder/offscreen.js
+./extension/recorder/capture.js
+./extension/recorder/SCHEMA_v0.md
+./extension/recorder/audits.js
+./extension/recorder/options.js
+./extension/content.js
+./extension/humanize
+./extension/humanize/cursor.js
+./extension/humanize/keyboard.js
+./extension/humanize/index.js
+./extension/humanize/rng.js
+./extension/audit
+./extension/audit/inject.js
+./extension/audit/index.js
+./extension/manifest.json
+./pyproject.toml
+./test-prompt.md
+./benchmark
+./benchmark/run_phase4_chain.sh
+./benchmark/audit_sandbox.py
+./benchmark/launch_exp1b.sh
+./benchmark/benchmark_report.html
+./benchmark/tasks_manifest.json
+./benchmark/benchmark_capstone.html
+./benchmark/img
+./benchmark/img/leg_4b_low.png
+./benchmark/img/pv_clean_b.png
+./benchmark/img/leg_baseline_low.png
+./benchmark/img/hero_low.png
+./benchmark/img/leg_5a_high.png
+./benchmark/img/arm_1a-brave.png
+./benchmark/img/leg_4a_high.png
+./benchmark/img/leg_2b_high.png
+./benchmark/img/prop_v3-source_labeled.png
+./benchmark/img/leg_5a_medium.png
+./benchmark/img/leg_5c_high.png
+./benchmark/img/arm_4a.png
+./benchmark/img/aggregate_medium.png
+./benchmark/img/leg_1b-cinc_low.png
+./benchmark/img/fp_mirror.png
+./benchmark/img/leg_5d_medium.png
+./benchmark/img/aggregate_low.png
+./benchmark/img/leg_3d_high.png
+./benchmark/img/leg_4a_low.png
+./benchmark/img/style_ink_a.png
+./benchmark/img/leg_3c_low.png
+./benchmark/img/leg_5d_low.png
+./benchmark/img/leg_2a_low.png
+./benchmark/img/leg_1a-brave_medium.png
+./benchmark/img/prop_v2-position.png
+./benchmark/img/leg_baseline_medium.png
+./benchmark/img/leg_3c_medium.png
+./benchmark/img/style_flat_a.png
+./benchmark/img/pv_soft_b.png
+./benchmark/img/prop_v3-source.png
+./benchmark/img/leg_1b-cinc_medium.png
+./benchmark/img/leg_1a-chrome_medium.png
+./benchmark/img/arm_2a.png
+./benchmark/img/comp_leaning.png
+./benchmark/img/prop_v6-browser.png
+./benchmark/img/style_ink_b.png
+./benchmark/img/leg_3d_low.png
+./benchmark/img/prop_task-paper.png
+./benchmark/img/prop_compression_labeled.png
+./benchmark/img/fp_monitor.png
+./benchmark/img/leg_1a-brave_high.png
+./benchmark/img/banner.png
+./benchmark/img/comp_corner.png
+./benchmark/img/leg_4b_high.png
+./benchmark/img/pv_loose_b.png
+./benchmark/img/aggregate_high.png
+./benchmark/img/prop_v7-recipe.png
+./benchmark/img/leg_1a-chrome_high.png
+./benchmark/img/fp_photo.png
+./benchmark/img/leg_2b_low.png
+./benchmark/img/prop_v2-position_labeled.png
+./benchmark/img/comp_reflection.png
+./benchmark/img/prop_v1-character.png
+./benchmark/img/arm_1b-cinc.png
+./benchmark/img/leg_5a_low.png
+./benchmark/img/arm_4b.png
+./benchmark/img/leg_4b_medium.png
+./benchmark/img/arm_1a-chrome.png
+./benchmark/img/leg_2b_medium.png
+./benchmark/img/leg_3c_high.png
+./benchmark/img/leg_5c_medium.png
+./benchmark/img/leg_5b_low.png
+./benchmark/img/leg_2a_high.png
+./benchmark/img/prop_v5-harness.png
+./benchmark/img/style_pencil_b.png
+./benchmark/img/leg_4a_medium.png
+./benchmark/img/prop_v1-character_labeled.png
+./benchmark/img/arm_5b.png
+./benchmark/img/arm_3c.png
+./benchmark/img/prop_v1-tiredness.png
+./benchmark/img/fp_phone.png
+./benchmark/img/leg_5c_low.png
+./benchmark/img/arm_5d.png
+./benchmark/img/fp_cameo.png
+./benchmark/img/prop_task-paper_labeled.png
+./benchmark/img/arm_2b.png
+./benchmark/img/arm_3d.png
+./benchmark/img/leg_1b-cinc_high.png
+./benchmark/img/leg_3d_medium.png
+./benchmark/img/arm_5a.png
+./benchmark/img/leg_5b_medium.png
+./benchmark/img/leg_5b_high.png
+./benchmark/img/prop_compression.png
+./benchmark/img/leg_2a_medium.png
+./benchmark/img/arm_5c.png
+./benchmark/img/style_flat_b.png
+./benchmark/img/comp_across.png
+./benchmark/img/leg_baseline_high.png
+./benchmark/img/leg_1a-brave_low.png
+./benchmark/img/prop_v4-prior_labeled.png
+./benchmark/img/fp_badge.png
+./benchmark/img/leg_5d_high.png
+./benchmark/img/leg_1a-chrome_low.png
+./benchmark/img/prop_master.png
+./benchmark/img/style_pencil_a.png
+./benchmark/img/comp_inset.png
+./benchmark/img/prop_v6-browser_labeled.png
+./benchmark/img/prop_v4-prior.png
+./benchmark/composite.html
+./benchmark/expert_cheatsheet.html
+./benchmark/archive
+./benchmark/archive/benchmark_report_postfix_v1.html
+./benchmark/archive/benchmark_report_pre_fix.html
+./benchmark/experiment_process.html
+./benchmark/harness.py
+./benchmark/build_experiential_env.py
+./benchmark/phase7_reproduction
+./benchmark/phase7_reproduction/README.md
+./benchmark/phase7_reproduction/sources_cowork
+./benchmark/phase7_reproduction/sources_ocic.md
+./benchmark/build_p7_envs.py
+./benchmark/style_bible.html
+./benchmark/analysis
+./benchmark/analysis/phase1_highlight.png
+./benchmark/analysis/turnscale_4reps.html
+./benchmark/analysis/gen_legs.py
+./benchmark/analysis/ratio_decay.html
+./benchmark/analysis/ctxcurve.json
+./benchmark/analysis/build_lengthscale_latency_logy.py
+./benchmark/analysis/turnscale_avgsplit_logx.png
+./benchmark/analysis/scalar_space_p7.html
+./benchmark/analysis/phase3_highlight.html
+./benchmark/analysis/thinking_per_task.json
+./benchmark/analysis/accuracy_regrade.py
+./benchmark/analysis/phase7_highlight.html
+./benchmark/analysis/toolcalls_delta.html
+./benchmark/analysis/turnscale_quad.html
+./benchmark/analysis/phase5_highlight.png
+./benchmark/analysis/gen_arms.py
+./benchmark/analysis/aggregate_prompt.txt
+./benchmark/analysis/turns_ratio_residuals.png
+./benchmark/analysis/phase2_highlight.html
+./benchmark/analysis/phase4_highlight.html
+./benchmark/analysis/build_search_tax.py
+./benchmark/analysis/thinking_ratio_decay.html
+./benchmark/analysis/build_validation_toolcalls.py
+./benchmark/analysis/turnscale_5reps.html
+./benchmark/analysis/thinking_ratio_decay.png
+./benchmark/analysis/turnscale_avgsplit.html
+./benchmark/analysis/build_toolcalls_delta.py
+./benchmark/analysis/build_turnscale_quad.py
+./benchmark/analysis/build_style_bible.py
+./benchmark/analysis/ratio_decay.png
+./benchmark/analysis/build_phase_highlight.py
+./benchmark/analysis/build_turns_ratio_connect.py
+./benchmark/analysis/capstone.json
+./benchmark/analysis/build_ratio_charts_mpl.py
+./benchmark/analysis/turns_ratio_decay.html
+./benchmark/analysis/build_turns_ratio_residuals.py
+./benchmark/analysis/accuracy_phase.html
+./benchmark/analysis/latency_harness.html
+./benchmark/analysis/gen_image.py
+./benchmark/analysis/accuracy_arm.html
+./benchmark/analysis/runtime_arm.html
+./benchmark/analysis/img
+./benchmark/analysis/turnscale_avgsplit_logx.html
+./benchmark/analysis/stats.py
+./benchmark/analysis/build_report.py
+./benchmark/analysis/pass_slow_fail.html
+./benchmark/analysis/build_turnscale_avgsplit_logx.py
+./benchmark/analysis/build_turnscale_avgsplit.py
+./benchmark/analysis/build_turnscale_5reps.py
+./benchmark/analysis/accuracy_corrected.json
+./benchmark/analysis/turnscale_overlap.html
+./benchmark/analysis/stats.json
+./benchmark/analysis/compute_thinking_per_task.py
+./benchmark/analysis/lengthscale_avgsplit_logx.png
+./benchmark/analysis/build_accuracy_source.py
+./benchmark/analysis/build_turns_delta.py
+./benchmark/analysis/gen_char.py
+./benchmark/analysis/latency_thinking.html
+./benchmark/analysis/build_runtime_arm.py
+./benchmark/analysis/turns_delta.html
+./benchmark/analysis/build_phase7_highlight.py
+./benchmark/analysis/build_latency_thinking.py
+./benchmark/analysis/fit_quality.html
+./benchmark/analysis/amortization.json
+./benchmark/analysis/gen_styles.py
+./benchmark/analysis/__pycache__
+./benchmark/analysis/build_latency_harness.py
+./benchmark/analysis/build_capstone.py
+./benchmark/analysis/search_tax.html
+./benchmark/analysis/build_lengthscale_avgsplit_logx.py
+./benchmark/analysis/phase6_highlight.html
+./benchmark/analysis/thinking_breakdown.json
+./benchmark/analysis/turns_ratio_connect.html
+./benchmark/analysis/usage.json
+./benchmark/analysis/accuracy_source.html
+./benchmark/analysis/phase2_highlight.png
+./benchmark/analysis/toolcalls.json
+./benchmark/analysis/lengthscale_avgsplit_logx.html
+./benchmark/analysis/build_accuracy_phase.py
+./benchmark/analysis/turns_ratio_decay.png
+./benchmark/analysis/gen_prop_labels.py
+./benchmark/analysis/phase6_highlight.png
+./benchmark/analysis/build_readme_parity.py
+./benchmark/analysis/phase3_highlight.png
+./benchmark/analysis/build_scalar_p7.py
+./benchmark/analysis/validation_toolcalls.html
+./benchmark/analysis/fail_answers.json
+./benchmark/analysis/gen_compositions.py
+./benchmark/analysis/build_ratio_decay.py
+./benchmark/analysis/build_turns_ratio_decay.py
+./benchmark/analysis/lengthscale_latency_logy.html
+./benchmark/analysis/gen_hero.py
+./benchmark/analysis/scalar_space.html
+./benchmark/analysis/phase5_highlight.html
+./benchmark/analysis/deep.json
+./benchmark/analysis/turnscale_fit.json
+./benchmark/analysis/lengthscale_latency_logy.png
+./benchmark/analysis/gen_master.py
+./benchmark/analysis/lengthscale_avgsplit.html
+./benchmark/analysis/deepdive.py
+./benchmark/analysis/gen_pencil_variants.py
+./benchmark/analysis/build_deep_dive.py
+./benchmark/analysis/build_fit_quality.py
+./benchmark/analysis/harvest.json
+./benchmark/analysis/readme_parity.html
+./benchmark/analysis/verify_ratio_charts.py
+./benchmark/analysis/build_scalar_intro.py
+./benchmark/analysis/gen_props.py
+./benchmark/analysis/build_pass_slow_fail.py
+./benchmark/analysis/build_composite.py
+./benchmark/analysis/turns_ratio_residuals.html
+./benchmark/analysis/build_accuracy_arm.py
+./benchmark/analysis/focus_adjusted.json
+./benchmark/analysis/build_context_latency.py
+./benchmark/analysis/difficulty.json
+./benchmark/analysis/build_thinking_ratio_decay.py
+./benchmark/analysis/build_report_v2.py
+./benchmark/analysis/gen_fp.py
+./benchmark/analysis/turns_ratio_connect.png
+./benchmark/analysis/phase1_highlight.html
+./benchmark/analysis/harvest.py
+./benchmark/analysis/phase4_highlight.png
+./benchmark/analysis/build_lengthscale_avgsplit.py
+./benchmark/analysis/build_turnscale_overlap.py
+./benchmark/analysis/context_latency.html
+./benchmark/analysis/compute_thinking_breakdown.py
+./benchmark/runner.py
+./benchmark/benchmark_deep_dive.html
+./benchmark/6b_reproduction
+./benchmark/6b_reproduction/README.md
+./benchmark/6b_reproduction/workspace_contents.md
+./benchmark/6b_reproduction/recipe_generation_prompt.md
+./benchmark/run_p7_distill.py
+./benchmark/dataset.html
+./benchmark/writeup
+./benchmark/writeup/images
+./benchmark/writeup/writeup.md
+./benchmark/run_phase5_chain.sh
+./docs
+./docs/img
+./docs/img/parity.png
+./docs/imitation-learning-alignment.html
+./REAL
+./REAL/LICENSE
+./REAL/src
+./REAL/src/__init__.py
+./REAL/src/agisdk.egg-info
+./REAL/src/agisdk
+./register-host.ps1
+
+=== PHASE 1B: files >150 lines with signatures
+./host/parent-watch.js (170 lines)
+  25:import { execFile } from "node:child_process";
+  26:import fs from "node:fs";
+  27:import os from "node:os";
+  28:import path from "node:path";
+  34:function recordExit(reason) {
+  36:    const file = path.join(
+  43:    const line = `${new Date().toISOString()} pid=${process.pid} ppid=${process.ppid} ${reason}\n`;
+  56:const LIVENESS_MS = Number(process.env.OCIC_PARENT_CHECK_MS) || 30_000;
+  59:const IDENTITY_EVERY = Number(process.env.OCIC_IDENTITY_EVERY) || 10; // ~5 min
+  66:function birthTime(pid) {
+  80:        const filetime = Number(String(stdout).trim());
+  89:function parentIsAlive(ppid) {
+  109:export function noteActivity() {
+  120:export function watchParent(onOrphaned) {
+  121:  const startedAt = Date.now();
+  122:  const initialPpid = process.ppid;
+  126:  const orphaned = (why) => {
+  143:  const idleLimit = parseInt(process.env.OCIC_IDLE_EXIT_MS || "", 10);
+  145:  const timer = setInterval(async () => {
+  150:    const ppid = process.ppid;
+  162:    const born = await birthTime(ppid);
+./host/codemode/server-codemode.js (180 lines)
+  14:import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+  15:import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+  16:import { z } from "zod";
+  18:import {
+  29:import { generateTsApi } from "../tool-definitions.js";
+  31:const NAMESPACE = "chrome";
+  33:const EXTRA_NOTES = `
+  44:  const apiBlock = generateTsApi(upstreamTools, NAMESPACE);
+  45:  const description = buildExecuteCodeDescription({
+  55:  const wranglerReady = (async () => {
+  82:  const server = new McpServer(
+./host/codemode/server-hybrid.js (260 lines)
+  11:import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+  12:import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+  13:import {
+  18:import {
+  29:import { generateTsApi } from "../tool-definitions.js";
+  30:import { onRecordingEvent } from "../tool-runtime.js";
+  32:const NAMESPACE = "chrome";
+  38:const RECORDER_INSTRUCTIONS = `
+  65:const RECORDING_ACK_TOOL = {
+  82:const EXTRA_NOTES = `
+  94:  const apiBlock = generateTsApi(upstreamTools, NAMESPACE);
+  96:  const executeCodeTool = {
+  116:  const allTools = [...upstreamTools, executeCodeTool, RECORDING_ACK_TOOL];
+  122:  const wranglerReady = (async () => {
+  149:  const server = new Server(
+  169:    const meta = {
+  178:    const content =
+  200:      const recordingId = String(args?.recording_id ?? "");
+./host/codemode/common.js (480 lines)
+  7:import http from "node:http";
+  8:import net from "node:net";
+  9:import os from "node:os";
+  10:import path from "node:path";
+  11:import { existsSync } from "node:fs";
+  12:import { fileURLToPath } from "node:url";
+  13:import { spawn } from "node:child_process";
+  14:import { watchParent } from "../parent-watch.js";
+  16:import {
+  21:import { toolsAsJsonSchemaList } from "../tool-definitions.js";
+  23:const __filename = fileURLToPath(import.meta.url);
+  24:const __dirname = path.dirname(__filename);
+  26:const WORKER_DIR = path.join(__dirname, "worker");
+  28:const log = (...args) => process.stderr.write(`[codemode] ${args.join(" ")}\n`);
+  30:export async function pickFreePort() {
+  32:    const srv = net.createServer();
+  36:      const port = srv.address().port;
+  42:export async function connectUpstream() {
+  47:  const tools = toolsAsJsonSchemaList();
+  49:  const client = {
+  56:function extractText(result) {
+  57:  const blocks = result?.content;
+  68:function parseLeadingJson(text) {
+  73:  const first = text[i];
+  75:  const close = first === "{" ? "}" : "]";
+  80:    const c = text[j];
+  89:        const candidate = text.slice(i, j + 1);
+  91:          const value = JSON.parse(candidate);
+  92:          const trailing = text.slice(j + 1).trim();
+  109:export function unwrapMcpResult(result) {
+  110:  const blocks = result?.content;
+  113:    const t = blocks[0].text;
+  114:    const parsed = parseLeadingJson(t);
+  125:      const parsed = parseLeadingJson(b.text);
+  142:export function startCallbackServer(upstream) {
+  144:    const server = http.createServer(async (req, res) => {
+  145:      const m = req.url && req.url.match(/^\/tool\/(.+)$/);
+  150:      const name = decodeURIComponent(m[1]);
+  162:        const result = await upstream.callTool({ name, arguments: args });
+  164:          const msg = extractText(result) ?? `tool ${name} errored`;
+  169:        const unwrapped = unwrapMcpResult(result);
+  186:export async function startWorkerd({ variant } = {}) {
+  187:  const port = await pickFreePort();
+  194:  const variantTag = variant || "default";
+  195:  const persistTo = path.join(
+  212:  const directWranglerBin = path.join(
+  219:  const useDirectBin = existsSync(directWranglerBin);
+  220:  const wranglerArgs = [
+  236:  const isWindows = process.platform === "win32";
+  237:  const spawnEnv = { ...process.env, FORCE_COLOR: "0", NO_COLOR: "1" };
+  238:  const proc = isWindows
+  267:  const captured = [];
+  269:    const onData = (chunk) => {
+  270:      const text = chunk.toString();
+  316:export const DEFAULT_EXECUTE_TIMEOUT_MS = 300_000;
+  318:export function makeRunCode({ workerPort, callbackUrl, tools, namespace }) {
+  319:  const toolNames = tools.map((t) => t.name);
+  321:    const res = await fetch(`http://127.0.0.1:${workerPort}/execute`, {
+  333:      const text = await res.text();
+  342:export async function prewarmSandbox(runCode) {
+  344:    const t0 = Date.now();
+  352:export async function generateApiBlock({ workerPort, tools, namespace }) {
+  353:  const payload = {
+  361:  const res = await fetch(`http://127.0.0.1:${workerPort}/generate`, {
+  384:export const SERVER_INSTRUCTIONS = `agy-in-chrome drives the operator's real browser: their actual sessions, logins, and cookies, not a sandbox, so your actions have real effects.
+  390:export function buildExecuteCodeDescription({ apiBlock, namespace, extraNotes }) {
+  391:  const notes = extraNotes ?? "";
+  409:export function packExecuteResult(result) {
+  411:  const lines = [];
+  416:    const parts = result.calls.map((c) => `${c.tool} (${c.latencyMs}ms)`);
+  438:export function installCleanup({ wranglerProc, callbackServer, upstreamClient }) {
+  443:  const getProc =
+  445:  const cleanup = () => {
+  453:      const proc = getProc();
+./host/tool-definitions.js (735 lines)
+  9:import { z } from "zod";
+  10:import { zodToJsonSchema } from "zod-to-json-schema";
+  12:export const TOOLS = [
+  636:export function toolInputJsonSchema(tool) {
+  637:  const schema = zodToJsonSchema(z.object(tool.paramShape), {
+  648:export function toolsAsJsonSchemaList() {
+  664:function pascal(name) {
+  673:function escapeJsdoc(s) {
+  677:function tsType(schema) {
+  684:    const variants = (schema.anyOf || schema.oneOf).map(tsType);
+  698:      const required = new Set(schema.required || []);
+  699:      const props = schema.properties || {};
+  700:      const fields = Object.entries(props).map(([k, v]) => {
+  701:        const opt = required.has(k) ? "" : "?";
+  702:        const doc = v && v.description ? `    /** ${escapeJsdoc(String(v.description).replace(/\s+/g, " "))} */\n    ` : "    ";
+  718:export function generateTsApi(tools, namespace = "codemode") {
+  722:    const typeName = pascal(t.name);
+  723:    const inputBody = tsType(t.inputSchema || { type: "object" });
+  727:    const descLine = t.description
+./host/native-host.js (510 lines)
+  8:import net from "node:net";
+  9:import fs from "node:fs";
+  10:import path from "node:path";
+  11:import os from "node:os";
+  13:import {
+  22:function readNativeMessage(buffer) {
+  23:  const messages = [];
+  26:    const len = buffer.readUInt32LE(offset);
+  28:    const json = buffer.subarray(offset + 4, offset + 4 + len).toString("utf-8");
+  39:function writeNativeMessage(obj) {
+  40:  const json = JSON.stringify(obj);
+  41:  const buf = Buffer.from(json, "utf-8");
+  42:  const header = Buffer.alloc(4);
+  68:const PIPE_PATH = getPipePath();
+  75:const clients = new Map(); // clientId -> socket
+  76:const clientRequestMap = new Map(); // prefixed id -> { clientId, originalId }
+  79:const RETRY_MS = 1500;
+  80:const REJECTED_RETRY_MS = 15000;
+  83:const CLASSIFY_MS = 500;
+  85:function onIncomingConnection(socket) {
+  97:  const classifyTimer = setTimeout(() => {
+  108:    const idx = buffer.indexOf(10);
+  111:    const firstLine = buffer.subarray(0, idx).toString("utf-8").trim();
+  112:    const rest = buffer.subarray(idx + 1);
+  130:const pipeServer = net.createServer(onIncomingConnection);
+  138:const FAST_CLAIM_WINDOW_MS = 40_000;
+  139:const claimingSince = Date.now();
+  144:  const onErr = (err) => {
+  149:      const fast = Date.now() - claimingSince < FAST_CLAIM_WINDOW_MS;
+  163:function attachClient(socket, initialBuffer) {
+  164:  const clientId = String(++clientIdCounter);
+  171:  function pump() {
+  174:      const line = buffer.subarray(0, idx).toString("utf-8").trim();
+  178:        const msg = JSON.parse(line);
+  182:          const prefixedId = `h${clientId}_${msg.id}`;
+  207:function routeFromExtension(msg) {
+  217:    const line = JSON.stringify(msg) + "\n";
+  228:    const socket = clients.get(clientId);
+  248:function handleSaveAudit(msg) {
+  250:    const dir = path.join(
+  264:function handleSaveRecording(msg) {
+  266:    const dir = path.join(
+  302:function handleSaveAudio(msg) {
+  304:    const rel = String(msg.name || "").replace(/\\/g, "/");
+  307:    const base = path.join(
+  314:    const file = path.join(base, rel);
+  316:    const buf = Buffer.from(String(msg.b64 || ""), "base64");
+  327:function handleSaveScreenshot(msg) {
+  329:    const dir = path.join(
+  338:    const b64 = String(msg.dataUrl || "").replace(/^data:image\/\w+;base64,/, "");
+  349:function handleSaveScreenshotToDisk(msg) {
+  350:  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  351:  const dir = path.join(
+  359:    const b64 = String(msg.dataUrl || "").replace(/^data:image\/\w+;base64,/, "");
+  361:    const file = path.join(dir, `${timestamp}.jpg`);
+  374:function handleWriteTempFile(msg) {
+  375:  const reply = (payload) => writeNativeMessage({ id: msg.id, type: "temp_file_written", ...payload });
+  377:    const dir = path.join(os.homedir(), ".config", "agy-in-chrome", "tmp");
+  380:    const name = String(msg.filename || "upload.png").replace(/[^\w.\-]/g, "_");
+  381:    const file = path.join(dir, `${Date.now()}_${name}`);
+  382:    const b64 = String(msg.dataUrl || "").replace(/^data:[^;]+;base64,/, "");
+  389:    const cutoff = Date.now() - 24 * 60 * 60 * 1000;
+  395:        const p = path.join(dir, f);
+  477:const SILENCE_LIMIT_MS = Number(process.env.OCIC_SILENCE_LIMIT_MS) || 60_000;
+  483:function recordExit(reason) {
+  485:    const file = path.join(os.homedir(), ".config", "agy-in-chrome", "host-exits.log");
+  487:    const line = `${new Date().toISOString()} pid=${process.pid} ${reason}\n`;
+  493:    const kept = (prev + line).split("\n").slice(-200).join("\n");
+  500:  const silentFor = Date.now() - lastExtensionTraffic;
+  502:  const reason =
+./host/tool-runtime.js (290 lines)
+  19:import net from "node:net";
+  21:import { getPipePath } from "./endpoint.js";
+  22:import { noteActivity } from "./parent-watch.js";
+  24:const PIPE_PATH = getPipePath();
+  26:const REQUEST_TIMEOUT_MS = 60_000;
+  30:const LINK_GRACE_MS = 5_000;
+  31:const RECONNECT_MS = 500;
+  40:const pendingRequests = new Map(); // id -> { resolve, reject, timer, sent }
+  46:const HOST_DROPPED_ERROR =
+  52:const NO_BRIDGE_ERROR =
+  60:const recordingEventSubscribers = new Set();
+  61:export function onRecordingEvent(cb) {
+  65:function emitRecordingEvent(msg) {
+  73:const linkIsUp = () => socket && !socket.destroyed && socket.readyState === "open";
+  77:function waitForLink(maxMs) {
+  80:    const startedAt = Date.now();
+  81:    const poll = setInterval(() => {
+  93:function handleMessage(msg) {
+  111:function connect() {
+  115:  const sock = net.createConnection(PIPE_PATH);
+  130:      const line = readBuffer.subarray(0, idx).toString("utf-8").trim();
+  165:function failPending() {
+  174:function sendToExtension(tool, args) {
+  176:    const id = String(++requestIdCounter);
+  177:    const timer = setTimeout(() => {
+  181:    const entry = { resolve, reject, timer, sent: false };
+  184:    const line = JSON.stringify({ id, type: "tool_request", tool, args }) + "\n";
+  217:export async function init() {
+  228:export function coerceArgs(args) {
+  249:function textResult(text) {
+  260:export async function callTool(toolName, args) {
+  263:    const coerced = coerceArgs(args ?? {});
+  264:    const result = await sendToExtension(toolName, coerced);
+  277:export function shutdown() {
+./extension/vendor/rrweb-player.umd.min.js (201 lines)
+  89:  const lastBlobMap = /* @__PURE__ */ new Map();
+  90:  const transparentBlobMap = /* @__PURE__ */ new Map();
+  92:    const id = \`\${width}-\${height}\`;
+  95:      const offscreen = new OffscreenCanvas(width, height);
+  97:      const blob = await offscreen.convertToBlob(dataURLOptions);
+  98:      const arrayBuffer = await blob.arrayBuffer();
+  99:      const base64 = encode(arrayBuffer);
+  106:  const worker = self;
+  110:      const transparentBase64 = getTransparentBlobFor(
+  115:      const offscreen = new OffscreenCanvas(width, height);
+  116:      const ctx = offscreen.getContext("2d");
+  119:      const blob = await offscreen.convertToBlob(dataURLOptions);
+  120:      const type = blob.type;
+  121:      const arrayBuffer = await blob.arrayBuffer();
+  122:      const base64 = encode(arrayBuffer);
+./extension/vendor/rrweb.umd.min.js (173 lines)
+  89:  const lastBlobMap = /* @__PURE__ */ new Map();
+  90:  const transparentBlobMap = /* @__PURE__ */ new Map();
+  92:    const id = \`\${width}-\${height}\`;
+  95:      const offscreen = new OffscreenCanvas(width, height);
+  97:      const blob = await offscreen.convertToBlob(dataURLOptions);
+  98:      const arrayBuffer = await blob.arrayBuffer();
+  99:      const base64 = encode(arrayBuffer);
+  106:  const worker = self;
+  110:      const transparentBase64 = getTransparentBlobFor(
+  115:      const offscreen = new OffscreenCanvas(width, height);
+  116:      const ctx = offscreen.getContext("2d");
+  119:      const blob = await offscreen.convertToBlob(dataURLOptions);
+  120:      const type = blob.type;
+  121:      const arrayBuffer = await blob.arrayBuffer();
+  122:      const base64 = encode(arrayBuffer);
+./extension/background.js (3308 lines)
+  4:import * as humanize from "./humanize/index.js";
+  5:import * as audit from "./audit/index.js";
+  12:const NATIVE_HOST_NAME = "com.antigravity.agy_in_chrome";
+  25:const bootAt = Date.now();
+  26:const callTimings = [];
+  28:function recordTiming(entry) {
+  38:const attachedTabs = new Map(); // tabId -> { enabledDomains: Set }
+  39:const consoleMessages = new Map(); // tabId -> [{level, text, timestamp, url}]
+  40:const networkRequests = new Map(); // tabId -> [{url, method, status, type, timestamp}]
+  43:const networkByRequestId = new Map();
+  44:const screenshotStore = new Map(); // imageId -> base64
+  45:const screenshotSaves = new Map(); // reqId -> { resolve, reject } for save_to_disk
+  51:const cursorByTab = new Map(); // tabId -> { x, y }
+  70:function human(speed, seed) {
+  71:  const tier = speed || "fast";
+  72:  const wantSeed = typeof seed === "number" ? seed : null;
+  88:const SWITCH_RELEASE_MS = 15000;
+  94:  const ua = navigator.userAgent || "";
+  96:  const brands = (navigator.userAgentData?.brands || []).map((b) => b.brand).join(" ");
+  126:function connectNativeHost() {
+  144:        const resolve = recorder.pendingSaves.get(String(msg.recording_id));
+  152:        const pending = screenshotSaves.get(String(msg.id));
+  161:        const p = pendingNative.get(msg.id);
+  169:      const err = chrome.runtime.lastError;
+  195:function startHeartbeat() {
+  207:function stopHeartbeat() {
+  214:function sendResponse(id, result) {
+  223:function sendError(id, error) {
+  236:const pendingNative = new Map(); // request id -> { resolve, reject }
+  239:function nativeRequest(msg) {
+  242:    const id = `nr_${Date.now()}_${nativeReqSeq++}`;
+  246:      const p = pendingNative.get(id);
+  257:      const group = await chrome.tabGroups.get(tabGroupId);
+  260:        const tabs = await chrome.tabs.query({ groupId: tabGroupId });
+  275:  const win = await chrome.windows.create({ focused: false, url: "about:blank" });
+  276:  const tab = win.tabs[0];
+  277:  const groupId = await chrome.tabs.group({ tabIds: [tab.id] });
+  283:function formatTabContext(tabs) {
+  284:  const available = tabs.map((t) => ({
+  308:    const tab = await chrome.tabs.get(tabId);
+  313:          const group = await chrome.tabGroups.get(tab.groupId);
+  316:            const groupTabs = await chrome.tabs.query({ groupId: tabGroupId });
+  347:const attachingTabs = new Map();
+  351:  const attach = (async () => {
+  405:  const state = attachedTabs.get(tabId);
+  416:const CDP_TIMEOUT_MS = 20000;
+  417:function withTimeout(promise, ms, label) {
+  419:  const timeout = new Promise((_, reject) => {
+  427:  const t0 = Date.now();
+  429:    const out = await withTimeout(
+  447:function cdpDetail(method, p) {
+  473:    const byTab = { ...configState.byTab };
+  487:  const tabId = source.tabId;
+  490:    const msgs = consoleMessages.get(tabId) || [];
+  503:    const msgs = consoleMessages.get(tabId) || [];
+  504:    const text = params.args.map((a) => a.value ?? a.description ?? "").join(" ");
+  549:function recordNetworkEvent(tabId, requestId, makeRecord) {
+  550:  const reqs = networkRequests.get(tabId) || [];
+  557:  const existing = byId.get(requestId);
+  563:  const record = makeRecord(null);
+  568:    const evicted = reqs.splice(0, reqs.length - 1000);
+  571:    const evictedSet = new Set(evicted);
+  580:const KEY_MAP = {
+  590:function parseKeyCombo(keyStr) {
+  591:  const parts = keyStr.split("+").map((p) => p.trim().toLowerCase());
+  604:function parseModifierString(modStr) {
+  607:  const parts = modStr.split("+").map((p) => p.trim().toLowerCase());
+  620:    const response = await chrome.tabs.sendMessage(tabId, message);
+  638:  const resp = await sendContentMessage(tabId, {
+  649:const MAX_SCREENSHOT_WIDTH = 1280;
+  650:const MAX_SCREENSHOT_HEIGHT = 800;
+  669:    const vp = await cdp(tabId, "Runtime.evaluate", {
+  679:  const shot = async (quality) => {
+  680:    const params = { format: "jpeg", quality, optimizeForSpeed: true, captureBeyondViewport: false };
+  704:  const imageId = `screenshot_${Date.now()}`;
+  707:  const keys = Array.from(screenshotStore.keys());
+  718:function writeScreenshotToDisk(base64) {
+  720:  const id = `shot_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
+  755:const INPUT_ACK_WAIT_MS = 250; // Brave: bounded wait for fire-and-forget (mouseWheel never acks)
+  756:const CHROME_INPUT_ACK_WAIT_MS = 50; // Chrome: acks instantly, a short window suffices
+  760:  const t0 = Date.now();
+  763:  const send = withTimeout(
+  795:  const ackWaitMs = (await isBrave()) ? INPUT_ACK_WAIT_MS : CHROME_INPUT_ACK_WAIT_MS;
+  818:  const awaitAck = opts.awaitAck ?? (type === "mouseMoved" ? await isBrave() : true);
+  834:  const button = opts.button || "left";
+  835:  const clickCount = opts.clickCount || 1;
+  836:  const modifiers = opts.modifiers || 0;
+  841:    const s = human(effectiveConfig(tabId).humanize_speed, effectiveConfig(tabId).humanize_seed);
+  842:    const from = cursorByTab.get(tabId) || { x: Math.max(0, x - 220), y: Math.max(0, y - 160) };
+  855:  const brave = await isBrave();
+  869:const CONFIG_KEY = "ocic_config_v1";       // { default: {...} } in local
+  870:const TAB_CONFIG_KEY = "ocic_tab_config_v1"; // { [tabId]: {...} } in session
+  875:const CONFIG_SCHEMA = {
+  904:const AUDIT_MODES = ["off", "audit"];
+  913:    const local = await chrome.storage.local.get(CONFIG_KEY);
+  914:    const session = await chrome.storage.session.get(TAB_CONFIG_KEY);
+  941:function effectiveConfig(tabId) {
+  953:    const next = { ...configState.default };
+  960:  const id = String(tabId);
+  961:  const byTab = { ...configState.byTab };
+  962:  const forTab = { ...(byTab[id] || {}) };
+  1045:function sleep(ms) {
+  1073:    const resp = await sendContentMessage(tabId, { type: "describePoint", x, y });
+  1074:    const r = resp && resp.result;
+  1083:function formatHit(p) {
+  1089:  const r = p.r;
+  1090:  const vp = r.viewport ? r.viewport.join("x") : "?";
+  1096:  const h = r.hit;
+  1097:  const a = h.attrs || {};
+  1098:  const id = a.id ? `#${a.id}` : "";
+  1099:  const cls = h.cls ? `.${h.cls}` : "";
+  1100:  const extra = [];
+  1107:  const text = h.text ? ` "${h.text}"` : "";
+  1116:function hitNote_(p) {
+  1118:  const r = p.r;
+  1120:  const vp = r.viewport ? `${r.viewport[0]}x${r.viewport[1]}` : "the";
+  1159:const DEBUG_MAX = 1000;
+  1160:const debugLog = [];
+  1162:const debugBootedAt = Date.now();
+  1167:function argSummary(args) {
+  1169:  const parts = [];
+  1191:function resultShape(result) {
+  1192:  const items = (result && result.content) || [];
+  1199:  const bits = [];
+  1205:function dbg(kind, detail, extra) {
+  1207:    const e = { t: Date.now(), kind, detail: String(detail).slice(0, 300) };
+  1224:const toolHandlers = {
+  1232:    const tabs = await chrome.tabs.query({ groupId: tabGroupId });
+  1245:      const groupTabs = await chrome.tabs.query({ groupId: tabGroupId });
+  1248:    const tab = await chrome.tabs.create(
+  1253:    const tabs = await chrome.tabs.query({ groupId: tabGroupId });
+  1254:    const result = formatTabContext(tabs);
+  1263:    const requested = Array.isArray(args?.tabIds)
+  1278:    const inGroup = [];
+  1279:    const skipped = [];
+  1281:      const idNum = typeof id === "string" ? Number(id) : id;
+  1330:    const result = formatTabContext(tabs);
+  1366:      const listener = (updatedTabId, info) => {
+  1380:    const tab = await chrome.tabs.get(tabId);
+  1381:    const tabs = await chrome.tabs.query({ groupId: tabGroupId });
+  1382:    const loading = tab.status !== "complete" ? " (still loading)" : "";
+  1383:    const text = `Navigated to ${tab.url}${loading}.\n## Pages\n` +
+  1400:      const res = await resolveRefToCoordinates(tabId, args.ref);
+  1418:    const modifiers = parseModifierString(args.modifiers);
+  1424:    const HIT_PROBED = ["left_click", "right_click", "double_click", "triple_click", "hover", "scroll"];
+  1438:      const probe = await probeHit(tabId, coordinate[0], coordinate[1]);
+  1442:      const probe = await probeHit(tabId, args.start_coordinate[0], args.start_coordinate[1]);
+  1454:          const vp = await cdp(tabId, "Runtime.evaluate", {
+  1464:            const path = await writeScreenshotToDisk(base64);
+  1488:        const dx = coordinate ? coordinate[0] : 200;
+  1489:        const dy = coordinate ? coordinate[1] : 200;
+  1490:        const r = {};
+  1491:        const t = async (label, fn) => {
+  1492:          const t0 = Date.now();
+  1531:          const s = human(effectiveConfig(tabId).humanize_speed, effectiveConfig(tabId).humanize_seed);
+  1532:          const from = cursorByTab.get(tabId) || { x: Math.max(0, coordinate[0] - 200), y: Math.max(0, coordinate[1] - 150) };
+  1567:          const d = humanize.keyDescriptorFor(char);
+  1595:        const repeat = Math.min(args.repeat || 1, 100);
+  1597:        const keys = args.text.split(" ").filter(Boolean);
+  1601:            const resolvedKey = key.length === 1 ? key : key;
+  1625:        const dir = args.scroll_direction || "down";
+  1626:        const amount = Math.min(args.scroll_amount || 3, 10);
+  1627:        const deltaX = dir === "left" ? -amount * 100 : dir === "right" ? amount * 100 : 0;
+  1628:        const deltaY = dir === "up" ? -amount * 100 : dir === "down" ? amount * 100 : 0;
+  1651:          const s = human(effectiveConfig(tabId).humanize_speed, effectiveConfig(tabId).humanize_seed);
+  1652:          const from = cursorByTab.get(tabId);
+  1677:        const scrollContent = [
+  1709:        const duration = Math.min(args.duration || 1, 30);
+  1721:          const s = human(effectiveConfig(tabId).humanize_speed, effectiveConfig(tabId).humanize_seed);
+  1722:          const from = cursorByTab.get(tabId) || { x: sx, y: sy };
+  1731:        const steps = 10;
+  1733:          const mx = sx + ((ex - sx) * i) / steps;
+  1734:          const my = sy + ((ey - sy) * i) / steps;
+  1753:            const path = await writeScreenshotToDisk(fullBase64);
+  1777:    const resp = await sendContentMessage(tabId, {
+  1791:      const vp = await cdp(tabId, "Runtime.evaluate", {
+  1803:    const resp = await sendContentMessage(tabId, { type: "getPageText" });
+  1807:      const data = JSON.parse(resp.result);
+  1825:    const resp = await sendContentMessage(tabId, { type: "findElements", query });
+  1826:    const results = resp?.result || [];
+  1859:    const resp = await sendContentMessage(tabId, { type: "setFormValue", ref, value });
+  1860:    const result = resp?.result;
+  1868:    const tIn = Date.now();
+  1873:      const tEval = Date.now();
+  1874:      const result = await cdp(tabId, "Runtime.evaluate", {
+  1892:      const val = result.result;
+  1908:    const limit = Math.min(Number(args?.limit) || 200, 600);
+  1912:      const got = await chrome.storage.session.get(["mcp_call_timings", "mcp_boot_at"]);
+  1916:    const seen = new Set(callTimings.map((e) => `${e.t}|${e.tool}`));
+  1917:    const merged = stored.filter((e) => !seen.has(`${e.t}|${e.tool}`)).concat(callTimings);
+  1918:    const tabs = [];
+  1919:    const winIds = new Set();
+  1922:        const t = await chrome.tabs.get(id);
+  1929:    const windows = [];
+  1932:        const w = await chrome.windows.get(wid);
+  1964:        const re = new RegExp(pattern, "i");
+  1982:    const text = msgs
+  2014:    const text = reqs
+  2026:    const tab = await chrome.tabs.get(tabId);
+  2071:    const before = { state: win.state, w: win.width, h: win.height, left: win.left, top: win.top };
+  2078:      const v0 = await cdp(tabId, "Runtime.evaluate", {
+  2095:      const w2 = await chrome.windows.get(tab.windowId);
+  2105:    const readViewport = async () => {
+  2107:        const v = await cdp(tabId, "Runtime.evaluate", {
+  2116:    const changedFromBefore = (v) =>
+  2118:    const settleDeadline = 900;
+  2126:        const settled = await readViewport();
+  2132:      const next = await readViewport();
+  2135:    const settledViewport = last;
+  2146:    const actual = settledViewport;
+  2148:    const windowTook = after && Math.abs(after.w - width) <= 8 && Math.abs(after.h - height) <= 8;
+  2149:    const windowMoved = after && (after.w !== before.w || after.h !== before.h);
+  2150:    const pageFollowed =
+  2196:    const base64 = screenshotStore.get(imageId);
+  2207:    const mark = await sendContentMessage(tabId, { type: "markElementForUpload", ref });
+  2233:      const doc = await cdp(tabId, "DOM.getDocument", {});
+  2234:      const q = await cdp(tabId, "DOM.querySelector", {
+  2257:    const apiKey = await getApiKey();
+  2261:    const res = await chrome.runtime.sendMessage({
+  2274:    const path = await saveBundleToDisk({
+  2279:    const synopsis =
+  2304:    const mark = await sendContentMessage(tabId, { type: "markElementForUpload", ref });
+  2316:      const doc = await cdp(tabId, "DOM.getDocument", {});
+  2317:      const q = await cdp(tabId, "DOM.querySelector", {
+  2329:    const label = paths.length === 1 ? paths[0] : `${paths.length} files`;
+  2346:    const current = await detectBrowser();
+  2383:    const limit = Math.min(Math.max(Number(args?.limit) || 100, 1), DEBUG_MAX);
+  2384:    const kind = args?.kind;
+  2385:    const filter = args?.filter;
+  2386:    const tabId = args?.tabId;
+  2387:    const sinceMs = Number(args?.since_ms) || 0;
+  2388:    const now = Date.now();
+  2403:    const total = rows.length;
+  2409:        const hay = `${e.kind} ${e.detail} ${e.err || ""}`;
+  2413:    const matched = rows.length;
+  2418:    const ageS = Math.round((now - debugBootedAt) / 1000);
+  2419:    const head = [
+  2429:    const t0 = rows[0].t;
+  2430:    const lines = rows.map((e) => {
+  2431:      const rel = `+${String(e.t - t0).padStart(6)}ms`;
+  2432:      const ms = e.ms !== undefined ? ` (${e.ms}ms)` : "";
+  2433:      const tab = e.tab !== undefined ? ` tab=${e.tab}` : "";
+  2434:      const err = e.err ? `  ERR: ${e.err}` : "";
+  2440:    const byKind = {};
+  2443:      const k = e.detail.split(" ")[0];
+  2446:    const slow = Object.entries(byKind)
+  2452:    const span = rows[rows.length - 1].t - t0;
+  2453:    const out = [
+  2470:    const tabId = args?.tabId;
+  2471:    const payload = {
+  2498:    const effective = await writeConfig(key, value === undefined ? null : value, tabId);
+  2499:    const scope =
+  2501:    const known = Object.prototype.hasOwnProperty.call(CONFIG_SCHEMA, key)
+  2513:      const s = human(effective.humanize_speed, effective.humanize_seed);
+  2553:        const tab = await chrome.tabs.get(tabId);
+  2584:  const handler = toolHandlers[tool];
+  2590:  const t0 = Date.now();
+  2591:  const label = tool === "computer" ? `computer.${args && args.action}` : tool;
+  2603:    const clientId = (String(id).match(/^h(\d+)_/) || [])[1] ?? null;
+  2622:    const t0 = Date.now();
+  2623:    const result = await handler(args);
+  2651:const recorder = {
+  2679:const REC_STATE_KEY = "recorder_state_v1";
+  2681:function persistRecorderState() {
+  2712:const recorderReady = hydrateRecorderState();
+  2720:  const now = Date.now();
+  2729:  const name = String(++recorder.imgSeq).padStart(5, "0") + ".jpg";
+  2732:    const res = await chrome.runtime.sendMessage({
+  2752:function newRecordingId() {
+  2757:  const has = await chrome.offscreen.hasDocument?.();
+  2784:    const r = await chrome.runtime.sendMessage({
+  2796:function setBadge(on) {
+  2803:function setProcessingBadge(title) {
+  2815:function buildRecordingReference(path, transcriptStatus) {
+  2816:  const base =
+  2835:    const r = await chrome.runtime.sendMessage({ __ocic_offscreen: true, cmd: "copy", text });
+  2848:function scheduleBadgeClear() {
+  2850:  const ep = recorder.epoch; // this timer belongs to THIS result only
+  2859:function showResultBadge(kind, detail) {
+  2888:  const tabs = await chrome.tabs.query({});
+  2907:  const apiKey = await getApiKey();
+  2908:  const v = await validateKey(apiKey);
+  2920:  const url0 = await activeTabUrl();
+  2924:  const startRes = await chrome.runtime.sendMessage({
+  2951:    const err = (startRes && startRes.error) || "microphone unavailable";
+  2965:  const ep = ++recorder.epoch; // stale writers below check this before painting
+  2966:  const live = () => recorder.epoch === ep;
+  2967:  const tProc = Date.now();
+  2972:  const res = await chrome.runtime.sendMessage({
+  2984:  const path = await saveBundleToDisk(bundle).catch((e) => {
+  3001:  const tr = await chrome.runtime
+  3004:  const transcriptStatus =
+  3022:  const hold = 800 - (Date.now() - tProc);
+  3037:  const connectionState = await notifyAgent(bundle, path);
+  3039:    const deliv =
+  3045:    const head =
+  3059:const AUDIO_SLICE_BYTES = 768 * 1024; // ~1MB once base64-encoded
+  3064:      const r = await chrome.runtime.sendMessage({
+  3091:  const schemaMd = await getSchemaMd();
+  3092:  const done = new Promise((resolve) => {
+  3119:    const res = await fetch(chrome.runtime.getURL("recorder/SCHEMA_v0.md"));
+  3145:  const acked = await waitForAck(bundle.recording_id, 12000);
+  3149:function waitForAck(recordingId, timeoutMs) {
+  3152:    const start = Date.now();
+  3153:    const iv = setInterval(() => {
+  3185:      const op = recorder.active ? stopRecording() : startRecording();
+  3206:      const evt = { ...msg, tab: sender.tab?.id ?? -1, frame: sender.frameId ?? 0 };
+  3241:      const t = await chrome.tabs.get(tabId);
+  3296:    const groups = await chrome.tabGroups.query({ title: "AGY" });
+  3299:      const tabs = await chrome.tabs.query({ groupId: tabGroupId });
+./extension/recorder/schema.js (173 lines)
+  12:export const SCHEMA_VERSION = "v0";
+  16:export const ACTIONS = Object.freeze({
+  51:export function makeBehaviorEvent(o) {
+  52:  const e = {
+  79:export function makeAnchor({ selector, role, name, text, tag, attrs, path }) {
+  80:  const a = {};
+  96:export function makeEffect({ added, removed, textChanged, urlChanged }) {
+  97:  const e = {};
+  109:export function makeUtterance({ t, end, text }) {
+  114:export function newTrace(startedAt, session) {
+  129:export function cursorToTrack(points, traceStartedAt) {
+  139:export function imagesToTrack(images, traceStartedAt) {
+  159:export function segmentsToCognitive(segments, audioStartedAt, traceStartedAt) {
+  160:  const offsetMs = audioStartedAt - traceStartedAt; // align audio to trace zero
+./extension/recorder/offscreen.js (565 lines)
+  16:import { transcribe, validateOpenAiKey } from "./transcribe.js";
+  17:import {
+  25:const AUDIO_TIMESLICE_MS = 3000; // flush an audio chunk to disk every 3s
+  26:const WARMUP_MS = 2500; // hold "ready" until the mic input settles (muffled start)
+  30:const AUDIO_BITRATE = 32000;
+  38:const SEGMENT_MS = 10 * 60 * 1000;
+  49:function openDb() {
+  51:    const req = indexedDB.open("ocic-recorder", 3);
+  53:      const d = req.result;
+  69:function put(store, value) {
+  71:    const tx = db.transaction(store, "readwrite");
+  79:function putRecord(store, value) {
+  81:    const tx = db.transaction(store, "readwrite");
+  87:function getAll(store) {
+  89:    const tx = db.transaction(store, "readonly");
+  90:    const req = tx.objectStore(store).getAll();
+  95:function getRow(store, key) {
+  97:    const tx = db.transaction(store, "readonly");
+  98:    const req = tx.objectStore(store).get(key);
+  103:function clearStore(store) {
+  105:    const tx = db.transaction(store, "readwrite");
+  110:function patchSession(recording_id, patch) {
+  112:    const tx = db.transaction("sessions", "readwrite");
+  113:    const store = tx.objectStore("sessions");
+  114:    const get = store.get(recording_id);
+  116:      const rec = get.result;
+  131:function startSegment() {
+  132:  const index = session.segments.length;
+  134:  const mr = new MediaRecorder(micStream, {
+  140:      const buf = await e.data.arrayBuffer();
+  152:function rotateSegment() {
+  153:  const mr = mediaRecorder;
+  198:    const msg =
+  219:  const e = { ...evt };
+  235:function resize240(dataUrl) {
+  237:    const img = new Image();
+  239:      const h = 240;
+  240:      const w = Math.max(1, Math.round(img.width * (h / img.height)));
+  241:      const c = document.createElement("canvas");
+  267:  const s = session;
+  284:  const audioRows = await getAll("audio");
+  285:  const bySeg = new Map();
+  287:    const k = r.seg ?? 0;
+  291:  const segBlobs = s.segments
+  299:  const eventRows = await getAll("events");
+  300:  const trace = newTrace(s.started_at, { recording_id: s.recording_id, url0: s.url0 });
+  303:  const cursorRows = await getAll("cursor");
+  306:  const imageRows = await getAll("images");
+  343:function audioName(index) {
+  350:function audioSlice(msg) {
+  351:  const seg = pendingStop && pendingStop.segBlobs.find((x) => x.index === msg.index);
+  354:    const fr = new FileReader();
+  356:      const s = String(fr.result);
+  389:  const segStatuses = [];
+  392:    const t0 = seg.startEpoch - trace.started_at;
+  394:      const r = await transcribe(seg.blob, apiKey, { filename: `${seg.index}.webm` });
+  405:  const failed = segStatuses.filter((x) => x.status !== "ok");
+  425:  const row = await getRow("sessions", recording_id);
+  436:  const audioRows = (await getAll("audio")).filter((r) => r.recording_id === recording_id);
+  437:  const bySeg = new Map();
+  439:    const k = r.seg ?? 0;
+  443:  const segBlobs = row.segEpochs
+  453:  const trace = row.trace;
+  505:function buildSummary(trace) {
+  506:  const dur = Math.round(((trace.ended_at || 0) - trace.started_at) / 1000);
+  507:  const tabs = new Set(trace.behavior.map((e) => e.tab)).size;
+  508:  const host = (() => {
+  511:  const utt = (trace.cognitive || []).length;
+  512:  const narration =
+  522:function copyText(text) {
+  524:    const ta = document.createElement("textarea");
+  532:    const ok = document.execCommand("copy");
+./extension/recorder/capture.js (436 lines)
+  16:  const OVERRIDE_KEY = "altKey"; // Alt/Option = override/mask mode (§8)
+  24:  const HOVER_DWELL_MS = 350; // a brief pause (not a dead stop) counts as hover
+  25:  const HOVER_MOVE_EPS = 8; // px; movement beyond this restarts the dwell
+  26:  const DRAG_MIN_PX = 8; // button-held movement beyond this is a drag, not a click
+  27:  const CURSOR_SAMPLE_MS = 50; // throttle raw cursor sampling
+  28:  const CURSOR_BATCH_MAX = 40; // flush the cursor batch at this many points
+  29:  const CURSOR_FLUSH_MS = 700; // ...or at least this often
+  44:  const TAG_ROLE = {
+  48:  const SEMANTIC_ATTRS = [
+  53:  function accessibleName(el) {
+  66:  function pickAttrs(el) {
+  67:    const out = {};
+  69:      const v = el.getAttribute && el.getAttribute(a);
+  78:  function cssSelector(el) {
+  80:    const testid = el.getAttribute("data-testid") || el.getAttribute("data-test");
+  82:    const parts = [];
+  87:      const sibs = node.parentNode
+  100:  function ancestorPath(el, depth = 6) {
+  101:    const path = [];
+  105:      const id = node.id ? ` id="${node.id}"` : "";
+  106:      const role = node.getAttribute("role") ? ` role="${node.getAttribute("role")}"` : "";
+  107:      const cls = node.getAttribute("class")
+  116:  function resolveAnchor(el) {
+  132:  function captureEffect(afterFn) {
+  133:    const added = [];
+  134:    const removed = [];
+  135:    const obs = new MutationObserver((records) => {
+  146:    const urlBefore = location.href;
+  149:      const effect = {};
+  157:  function describeNode(n) {
+  158:    const role = n.getAttribute?.("role");
+  159:    const label = n.getAttribute?.("aria-label") || n.textContent?.trim().slice(0, 40);
+  164:  function emit(action, el, extra) {
+  166:    const suppressed = extra && extra.suppressed;
+  167:    const base = {
+  187:    const COMPUTER_ACTIONS = new Set([
+  191:    const input = {};
+  216:  function send(evt) {
+  228:  function flushCursor() {
+  230:    const points = cursorBatch;
+  241:  const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+  242:  const NONHOVER = new Set(["BODY", "HTML"]);
+  243:  const isHoverWorthy = (el) => el && el.nodeType === 1 && !NONHOVER.has(el.tagName);
+  269:      const now = Date.now();
+  270:      const p = { x: e.clientX, y: e.clientY };
+  288:          const el = document.elementFromPoint(p.x, p.y);
+  305:        const from = downPt;
+  325:  function modStr(e, withAlt) {
+  326:    const m = [];
+  384:        const mods = modStr(e, true);
+  385:        const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  396:      const el = e.target;
+  420:        const a = wheelAcc;
+  423:        const vert = Math.abs(a.dy) >= Math.abs(a.dx);
+  424:        const px = vert ? a.dy : a.dx;
+./extension/recorder/audits.js (364 lines)
+  9:import { listSessions, readSession, deleteSession } from "../audit/index.js";
+  14:function siteOf(url) {
+  18:function fmtClock(ms) {
+  19:  const s = Math.max(0, Math.round(ms / 1000));
+  22:function fmtWhen(t) {
+  28:export async function refreshAudits() {
+  29:  const host = $("auditList");
+  47:    const b = document.createElement("button");
+  92:const LEAD_IN_MS = 1000;
+  93:const LEAD_OUT_MS = 3000;
+  97:function buildTimeline() {
+  102:    const st = streams[seg.streamId];
+  104:    const first = st.events[0].timestamp;
+  105:    const last = st.events[st.events.length - 1].timestamp;
+  106:    const winStart = Math.max(first, seg.tStart - LEAD_IN_MS);
+  113:    const winEnd = Math.max(seg.tEnd + LEAD_OUT_MS, winStart + 1500);
+  114:    const dur = Math.max(900, winEnd - winStart);
+  134:function spanAt(t) {
+  139:function renderAt(t, { play = false } = {}) {
+  142:  const i = spanAt(T.t);
+  143:  const sp = T.spans[i];
+  157:function globalTimeOf(sp, a) {
+  161:function renderTimeline() {
+  162:  const host = $("timeline");
+  169:    const g = document.createElement("div");
+  172:    const head = document.createElement("div");
+  176:    const acts = document.createElement("div");
+  179:      const gt = globalTimeOf(sp, a);
+  180:      const b = document.createElement("button");
+  204:function highlight(spanIndex) {
+  205:  const groups = [...$("timeline").querySelectorAll(".tlgroup")];
+  207:  const all = [...$("timeline").querySelectorAll(".act")];
+  213:      const idx = all.findIndex((b) => Number(b.dataset.g) === T.pinned);
+  226:function setPlaying(on) {
+  242:  const wall0 = Date.now();
+  243:  const base = T.t;
+  245:    const next = base + (Date.now() - wall0);
+  247:    const before = spanAt(T.t);
+  248:    const after = spanAt(next);
+  264:function selectSegment(i, opts = {}) {
+  267:  const seg = segments[i];
+  269:  const st = streams[seg.streamId];
+  273:  const badge = $("segBadge");
+  289:function mountPlayer(stream, seg) {
+  290:  const host = $("player");
+  298:  const Player = (window.rrwebPlayer && window.rrwebPlayer.default) || window.rrwebPlayer;
+  315:    const t0 = stream.events[0].timestamp;
+  322:function seekTo(offsetMs, play = false) {
+  329:export function wireAuditTabs() {
+  330:  const tabA = $("tab-audits");
+  331:  const tabR = $("tab-recordings");
+  333:  const show = (audits) => {
+  343:  const del = $("auditDelete");
+  347:      const id = cur.payload.session.sessionId;
+  357:  const rf = $("auditRefresh");
+  360:  const play = $("playBtn");
+  362:  const scrub = $("scrub");
+./extension/recorder/options.js (587 lines)
+  6:import { validateOpenAiKey } from "./transcribe.js";
+  7:import { wireAuditTabs } from "./audits.js";
+  9:const keyInput = document.getElementById("key");
+  10:const keyStatus = document.getElementById("keyStatus");
+  25:const micStatus = document.getElementById("micStatus");
+  28:    const p = await navigator.permissions.query({ name: "microphone" });
+  39:    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  53:  const key = keyInput.value.trim();
+  56:  const v = await validateOpenAiKey(key);
+  68:function openDb() {
+  70:    const req = indexedDB.open("ocic-recorder", 3);
+  72:      const d = req.result;
+  89:function fmtTime(ms) {
+  92:function esc(s) {
+  97:function trunc(s, n) {
+  103:const traceCache = new Map();
+  106:  const container = document.getElementById("sessions");
+  109:  const rows = await new Promise((resolve) => {
+  110:    const tx = db.transaction("sessions", "readonly");
+  111:    const req = tx.objectStore("sessions").getAll();
+  120:    const dur = Math.round(((s.ended_at || 0) - s.started_at) / 1000);
+  121:    const host = (() => { try { return new URL(s.url0).host; } catch { return "—"; } })();
+  122:    const audioUrl = s.audio && s.audio.size ? URL.createObjectURL(s.audio) : null;
+  125:    const tstat = s.transcriptStatus || (s.trace && s.trace.transcript_status) || "";
+  126:    const status =
+  132:    const player = audioUrl
+  136:    const snip = (s.trace?.cognitive || []).slice(0, 2).map((u) => u.text).join(" ").trim();
+  137:    const snippet = snip ? `<span class="snip">“${esc(snip)}”</span>` : "";
+  138:    const pathText = s.path ? esc(s.path) : "not written to disk (mic or native-host issue)";
+  139:    const pathrow = `<div class="pathrow"><code>${pathText}</code><button class="copy-ref" data-rid="${esc(s.recording_id)}" data-path="${esc(s.path || "")}" data-tstatus="${esc(tstat)}">Copy reference</button></div>`;
+  140:    const frames = s.images && s.images.length ? ` · ${s.images.length} frames` : "";
+  141:    const el = document.createElement("details");
+  159:function renderTracks(trace, rid, images) {
+  161:  const beh = (trace.behavior || []).slice().sort((a, b) => a.t - b.t);
+  162:  const cog = (trace.cognitive || []).slice().sort((a, b) => a.t - b.t);
+  163:  const cur = (trace.cursor || []).slice().sort((a, b) => a.t - b.t);
+  168:  const lastT = Math.max(
+  178:  const cseg = [];
+  201:  const MK_H = 20; // one behavior mark
+  202:  const GAP = 3;
+  203:  const PX_PER_MS = 0.003; // 3px per idle second: quiet stretches stay visible
+  204:  const CW = 112; // curseg content width (lane minus padding/border)
+  206:  const uttLines = (u) => Math.min(4, Math.max(1, Math.ceil((u.text || "").length / 46)));
+  208:  const items = [];
+  211:    const im = nearestImage(images, s.start);
+  212:    const framed = !!(im && im.dataUrl && im.vw > 0 && im.vh > 0);
+  224:    const lines = uttLines(u);
+  229:  const bp = [[0, 0]]; // breakpoints [t, y] of the shared mapping
+  230:  const free = [0, 0, 0]; // per-lane occupied-until y
+  238:    const last = bp[bp.length - 1];
+  244:  const H = Math.max(Math.round(Math.max(yy + (lastT - prevT) * PX_PER_MS, ...free)) + 8, 220);
+  248:  const y = (t) => {
+  253:      const mid = (lo + hi) >> 1;
+  264:  const cursorBlocks = items
+  268:        const pts = s.pts.map((p) => `${p.x},${p.y}`).join(" ");
+  269:        const a = s.pts[0], b = s.pts[s.pts.length - 1];
+  270:        const r = Math.round(Math.max(im.vw, im.vh) * 0.013);
+  282:      const dens = Math.min(1, s.pts.length / 24);
+  290:  const marks = items
+  293:      const name = e.anchor?.name || e.anchor?.selector || "";
+  294:      const t = (e.t / 1000).toFixed(1);
+  295:      const flags =
+  298:      const label = `${t}s ${esc(e.action)}${flags} ${esc(trunc(name, 32))}`;
+  302:  const utts = items
+  312:  const stepSec = lastT > 240000 ? 60 : lastT > 120000 ? 30 : lastT > 30000 ? 10 : lastT > 10000 ? 5 : 2;
+  315:    const yt = y(s * 1000);
+  320:  const raw = `<details class="raw"><summary>raw trace JSON</summary><pre>${esc(JSON.stringify(trace, null, 2))}</pre></details>`;
+  342:const modal = document.getElementById("modal");
+  343:const modalBody = document.getElementById("modalBody");
+  344:function closeModal() {
+  356:  const copyBtn = e.target.closest(".copy-ref");
+  359:    const p = copyBtn.getAttribute("data-path");
+  360:    const rid = copyBtn.getAttribute("data-rid");
+  361:    const ts = copyBtn.getAttribute("data-tstatus") || "";
+  364:    const warn =
+  368:    const ref = p
+  378:  const cblk = e.target.closest(".curseg, .cur");
+  380:    const cache = traceCache.get(cblk.getAttribute("data-rid"));
+  384:  const el = e.target.closest(".mk, .utt");
+  386:  const cache = traceCache.get(el.getAttribute("data-rid"));
+  388:  const idx = +el.getAttribute("data-idx");
+  396:function nearestImage(images, t) {
+  400:    const d = Math.abs(im.t - t);
+  405:function frameHtml(images, t) {
+  406:  const im = nearestImage(images, t);
+  413:function endpointDot(ctx, x, y, color, label) {
+  423:  const tw = ctx.measureText(label).width;
+  439:function openCursorDetail(seg, images) {
+  441:  const im = nearestImage(images, seg.start);
+  442:  const overlay = !!(im && im.dataUrl && im.vw > 0 && im.vh > 0);
+  443:  const W = 520;
+  444:  const Hc = overlay ? Math.max(120, Math.round(W * (im.vh / im.vw))) : 300;
+  454:  const ctx = document.getElementById("curcv").getContext("2d");
+  456:  const strokePath = (mapx, mapy, color, width) => {
+  465:  const drawPath = (mapx, mapy) => {
+  468:    const a = seg.pts[0], b = seg.pts[seg.pts.length - 1];
+  474:    const img = new Image();
+  483:    const xs = seg.pts.map((p) => p.x), ys = seg.pts.map((p) => p.y);
+  484:    const minx = Math.min(...xs), maxx = Math.max(...xs);
+  485:    const miny = Math.min(...ys), maxy = Math.max(...ys);
+  486:    const pad = 22, sx = maxx - minx || 1, sy = maxy - miny || 1;
+  487:    const scale = Math.min((W - 2 * pad) / sx, (Hc - 2 * pad) / sy);
+  495:function row(k, v) {
+  498:function openBehaviorDetail(e, images) {
+  500:  const a = e.anchor || {};
+  501:  const attrs = a.attrs
+  504:  const path = a.path && a.path.length ? `<div class="path">${a.path.map(esc).join("\n")}</div>` : "";
+  505:  const val = e.value != null ? (typeof e.value === "string" ? e.value : JSON.stringify(e.value)) : "";
+  506:  const effect = e.effect ? JSON.stringify(e.effect, null, 2) : "";
+  510:  const im = nearestImage(images, e.t);
+  513:  const ci = (e.command && e.command.input) || e;
+  514:  const drag =
+  521:  const pt = !drag && ci.coordinate ? { x: ci.coordinate[0], y: ci.coordinate[1] } : e.p || null;
+  522:  const overlay = !!(im && im.dataUrl && im.vw > 0 && im.vh > 0 && (pt || drag));
+  523:  const W = 520;
+  524:  const Hb = overlay ? Math.max(120, Math.round(W * (im.vh / im.vw))) : 0;
+  546:    const ctx = document.getElementById("behcv").getContext("2d");
+  547:    const mx = (x) => (x / im.vw) * W;
+  548:    const my = (y) => (y / im.vh) * Hb;
+  549:    const img = new Image();
+  573:function openUtteranceDetail(u, images) {
+./extension/content.js (668 lines)
+  16:  const elementMap = {}; // refId -> WeakRef<Element>
+  17:  const reverseMap = new WeakMap(); // Element -> refId
+  19:  function getOrAssignRef(el) {
+  20:    const existing = reverseMap.get(el);
+  22:    const ref = `ref_${++refCounter}`;
+  28:  function resolveRef(refId) {
+  29:    const wr = elementMap[refId];
+  31:    const el = wr.deref();
+  40:  const TAG_TO_ROLE = {
+  77:  function getRole(el) {
+  79:    const tag = el.tagName.toLowerCase();
+  81:      const type = (el.type || "text").toLowerCase();
+  82:      const typeRoles = {
+  98:  function getAccessibleName(el) {
+  100:    const ariaLabel = el.getAttribute("aria-label");
+  103:    const labelledBy = el.getAttribute("aria-labelledby");
+  105:      const names = labelledBy
+  123:      const label = document.querySelector(`label[for="${CSS.escape(el.id)}"]`);
+  127:      const labelText = el.closest("label").textContent.trim();
+  132:    const tag = el.tagName.toLowerCase();
+  134:      const text = el.textContent?.trim();
+  142:  function isInteractive(el) {
+  143:    const tag = el.tagName.toLowerCase();
+  153:  function isVisible(el) {
+  155:    const style = getComputedStyle(el);
+  161:  function generateAccessibilityTree(options = {}) {
+  162:    const filter = options.filter || "all";
+  163:    const maxDepth = options.depth || 15;
+  164:    const maxChars = options.max_chars || 50000;
+  165:    const startRefId = options.ref_id || null;
+  171:    function append(text) {
+  184:    function walk(el, depth, indent) {
+  189:      const tag = el.tagName.toLowerCase();
+  193:      const role = getRole(el);
+  194:      const name = getAccessibleName(el);
+  195:      const interactive = isInteractive(el);
+  196:      const visible = isVisible(el);
+  199:      const isContainer = el.children.length > 0;
+  202:      const shouldShow =
+  207:        const ref = getOrAssignRef(el);
+  226:          const opts = Array.from(el.options).map(
+  236:      const nextIndent = shouldShow && visible ? indent + "  " : indent;
+  249:      const el = resolveRef(startRefId);
+  259:  function getPageText() {
+  260:    const selectors = [
+  277:    const title = document.title || "";
+  278:    const url = location.href;
+  279:    const tag = source.tagName.toLowerCase();
+  282:    const clone = source.cloneNode(true);
+  284:    const text = clone.textContent.replace(/\s+/g, " ").trim();
+  290:  function findElements(query) {
+  291:    const q = query.toLowerCase();
+  292:    const results = [];
+  295:    function collectAll(root) {
+  296:      const elements = [];
+  306:    const all = collectAll(document);
+  312:      const tag = el.tagName.toLowerCase();
+  315:      const role = getRole(el) || "";
+  316:      const name = getAccessibleName(el) || "";
+  317:      const text = el.textContent?.trim()?.substring(0, 200) || "";
+  322:      const placeholder = typeof el.placeholder === "string" ? el.placeholder : "";
+  323:      const ariaLabel = el.getAttribute("aria-label") || "";
+  324:      const title = typeof el.title === "string" ? el.title : "";
+  325:      const type = typeof el.type === "string" ? el.type : "";
+  327:      const searchable = `${role} ${name} ${text} ${placeholder} ${ariaLabel} ${title} ${type} ${tag}`.toLowerCase();
+  330:        const ref = getOrAssignRef(el);
+  331:        const rect = el.getBoundingClientRect();
+  332:        const cx = Math.round(rect.x + rect.width / 2);
+  333:        const cy = Math.round(rect.y + rect.height / 2);
+  356:  function findInputInside(el) {
+  357:    const tag = el.tagName.toLowerCase();
+  361:    const root = el.shadowRoot || el;
+  362:    const inner = root.querySelector("input, textarea, select");
+  368:        const deep = child.shadowRoot.querySelector("input, textarea, select");
+  375:  function setFormValue(refId, value) {
+  376:    const el = resolveRef(refId);
+  382:    const target = findInputInside(el) || el;
+  383:    const tag = target.tagName.toLowerCase();
+  384:    const type = (target.type || "").toLowerCase();
+  387:      const opt = Array.from(target.options).find(
+  396:      const shouldCheck = typeof value === "boolean" ? value : value === "true";
+  403:      const proto = tag === "textarea" ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+  404:      const setter = Object.getOwnPropertyDescriptor(proto, "value")?.set;
+  433:  function describePoint(x, y) {
+  434:    const vw = window.innerWidth;
+  435:    const vh = window.innerHeight;
+  436:    const outside = x < 0 || y < 0 || x >= vw || y >= vh;
+  437:    const el = outside ? null : document.elementFromPoint(x, y);
+  444:      const inner = node.shadowRoot.elementFromPoint(x, y);
+  449:    const tag = node.tagName.toLowerCase();
+  450:    const attrs = {};
+  452:      const v = node.getAttribute && node.getAttribute(a);
+  455:    const cls =
+  459:    const text = (node.textContent || "").replace(/\s+/g, " ").trim().slice(0, 60);
+  462:    const existing = reverseMap.get(node);
+  463:    const ref = existing && elementMap[existing]?.deref() === node ? existing : null;
+  487:    const labelEl = node.closest ? node.closest("label") : null;
+  488:    const ctrl = labelEl && labelEl.control;
+  489:    const noNativeActivation = !ctrl || ctrl.matches(":disabled");
+  494:    const interactiveAncestor = node.closest(
+  505:    const deadLabel = !!labelEl && noNativeActivation && !interactiveAncestor;
+  517:  function getRefCoordinates(refId, opts = {}) {
+  518:    const el = resolveRef(refId);
+  536:      const r = el.getBoundingClientRect();
+  537:      const off =
+  552:    const rect = el.getBoundingClientRect();
+  553:    const x = Math.round(rect.x + rect.width / 2);
+  554:    const y = Math.round(rect.y + rect.height / 2);
+  561:      const at = document.elementFromPoint(x, y);
+  575:  function describeBrief(el) {
+  576:    const id = el.id ? `#${el.id}` : "";
+  577:    const cls =
+  581:    const t = (el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 40);
+  588:      const result = generateAccessibilityTree(msg.options || {});
+  594:      const result = getPageText();
+  600:      const result = findElements(msg.query);
+  606:      const result = setFormValue(msg.ref, msg.value);
+  617:      const result = getRefCoordinates(msg.ref, { scrollIntoView: msg.scrollIntoView });
+  629:      const el = resolveRef(msg.ref);
+  634:      const isFileInput =
+./extension/humanize/cursor.js (189 lines)
+  14:import { clamp } from "./rng.js";
+  17:function bezier(p0, p1, p2, p3, t) {
+  18:  const u = 1 - t;
+  19:  const a = u * u * u, b = 3 * u * u * t, c = 3 * u * t * t, d = t * t * t;
+  27:function easeInOut(t) {
+  31:export function distance(a, b) {
+  40:export function sampleInBox(rect, rng, persona = { steadiness: 1 }) {
+  42:  const cx = rect.x + rect.width / 2;
+  43:  const cy = rect.y + rect.height / 2;
+  46:  const sdx = Math.min(rect.width / 5, 14) * persona.steadiness;
+  47:  const sdy = Math.min(rect.height / 5, 10) * persona.steadiness;
+  49:  const mx = Math.min(rect.width * 0.32, 6);
+  50:  const my = Math.min(rect.height * 0.32, 5);
+  61:function moveDurationMs(dist, targetSize, rng, persona) {
+  62:  const w = clamp(targetSize || 24, 8, 260);
+  63:  const base = 90 + 105 * Math.log2(1 + dist / w);
+  81:const CADENCE_MS = 8;
+  91:const MAX_MOVE_MS = 2000;
+  99:export function planPath(from, to, rng, persona, opts = {}) {
+  100:  const dist = distance(from, to);
+  101:  const steps = [];
+  104:  const targetSize = opts.targetSize || 24;
+  105:  const tempo = opts.tempo || { time: 1 };
+  110:  const totalMs = clamp(
+  120:  const n = Math.max(3, Math.round(totalMs / CADENCE_MS));
+  121:  const cadence = CADENCE_MS;
+  125:  const dx = to.x - from.x, dy = to.y - from.y;
+  126:  const px = -dy / (dist || 1), py = dx / (dist || 1);
+  127:  const bow = clamp(dist * rng.uniform(0.05, 0.22), 4, 130) * (rng.chance(0.5) ? 1 : -1);
+  128:  const c1 = {
+  132:  const c2 = {
+  140:  const doOvershoot =
+  142:  const aim = doOvershoot
+  151:    const t = easeInOut(i / n);
+  152:    const p = bezier(from, c1, c2, aim, t);
+  155:    const jx = rng.gauss(0, 0.55 * persona.steadiness);
+  156:    const jy = rng.gauss(0, 0.55 * persona.steadiness);
+  157:    const pt = { x: Math.round(p.x + jx), y: Math.round(p.y + jy) };
+  168:    const hops = rng.int(1, 2);
+  170:      const t = i / hops;
+  184:  const last = steps[steps.length - 1];
+./extension/humanize/index.js (254 lines)
+  23:import { makeRng, makePersona, randomSeed, clamp } from "./rng.js";
+  24:import { planPath, sampleInBox, distance } from "./cursor.js";
+  25:import { typematic, keyHoldMs, interKeyMs, keyDescriptor } from "./keyboard.js";
+  29:export { keyDescriptor as keyDescriptorFor };
+  31:export { sampleInBox };
+  58:export const TEMPOS = {
+  67:export const DEFAULT_TEMPO = "fast";
+  74:export function createSession(seed, speed = DEFAULT_TEMPO) {
+  75:  const rng = makeRng(seed ?? randomSeed());
+  76:  const persona = makePersona(rng);
+  81:export function setSpeed(s, speed) {
+  87:function t(s, ms) {
+  105:function tKey(s, ms) {
+  110:export function thinkDelay(s, weight = 1) {
+  114:function moveSteps(s, from, to, targetSize) {
+  115:  const out = [];
+  129:export function planClick(s, from, to, opts = {}) {
+  131:  const plan = moveSteps(s, from, to, targetSize);
+  161:export function planHover(s, from, to, opts = {}) {
+  162:  const plan = moveSteps(s, from, to, opts.targetSize || 24);
+  168:export function planDrag(s, from, start, end, opts = {}) {
+  169:  const plan = moveSteps(s, from, start, opts.targetSize || 24);
+  209:export function planType(s, text) {
+  210:  const plan = [];
+  214:    const d = keyDescriptor(ch);
+  220:    const mods = d.shift ? 8 : 0;
+  236:export function planKey(s, { key, code, keyCode, mods = 0, holdMs = 0 }) {
+  237:  const plan = [{ k: "kdown", key, code, keyCode, mods }];
+  243:      const step = s.tm.repeatMs * s.rng.uniform(0.85, 1.15);
+  254:export { distance };
+./extension/audit/index.js (414 lines)
+  16:const DB_NAME = "ocic-audit";
+  17:const DB_VERSION = 1;
+  32:const IDLE_STOP_MS = 30 * 60 * 1000; // no action against this tab for 30 min
+  33:const MAX_STREAM_BYTES = 40 * 1024 * 1024; // ~40MB of events, then stop appending
+  34:const SESSION_IDLE_MS = 30 * 60 * 1000; // a client quiet this long starts a new session
+  42:function openDb() {
+  45:    const req = indexedDB.open(DB_NAME, DB_VERSION);
+  47:      const db = req.result;
+  67:function tx(db, stores, mode) {
+  71:function reqDone(r) {
+  79:  const db = await openDb();
+  80:  const t = tx(db, [store], "readwrite");
+  85:  const db = await openDb();
+  86:  const t = tx(db, [store], "readonly");
+  91:  const db = await openDb();
+  92:  const t = tx(db, [store], "readonly");
+  98:export function setEnabled(on) {
+  102:export function isEnabled() {
+  108:function newStreamId(tabId, t) {
+  125:export async function ensureStream(tabId, opts = {}) {
+  128:    const pong = await chrome.tabs.sendMessage(tabId, { type: "audit_ping" }).catch(() => null);
+  134:  const startedAt = Date.now();
+  135:  const streamId = newStreamId(tabId, startedAt);
+  155:    const tab = await chrome.tabs.get(tabId);
+  177:export async function ingest(msg) {
+  179:  const meta = await get("streams", msg.streamId);
+  183:  const bytes = JSON.stringify(msg.events).length;
+  201:export async function onTabRemoved(tabId) {
+  202:  const streams = await getAll("streams");
+  203:  const now = Date.now();
+  213:export async function reapIdle() {
+  214:  const now = Date.now();
+  215:  const streams = await getAll("streams");
+  240:function newSessionId(clientId, t) {
+  245:  const all = await getAll("sessions");
+  246:  const mine = all
+  249:  const live = mine[0];
+  251:  const startedAt = Date.now();
+  252:  const fresh = {
+  269:export async function noteAction({ clientId, tool, action, tabId, detail, postToHost }) {
+  275:    const session = await currentSession(clientId);
+  303:const CHECKPOINT_DEBOUNCE_MS = 5000;
+  304:const pendingCheckpoints = new Map();
+  306:function scheduleCheckpoint(sessionId, postToHost) {
+  308:  const timer = setTimeout(() => {
+  315:export async function checkpoint(sessionId, postToHost) {
+  317:  const payload = await readSession(sessionId);
+  331:export function segmentsOf(session) {
+  332:  const segs = [];
+  335:    const last = segs[segs.length - 1];
+  346:export async function listSessions() {
+  347:  const sessions = await getAll("sessions");
+  348:  const streams = await getAll("streams");
+  349:  const byId = new Map(streams.map((s) => [s.streamId, s]));
+  353:      const segs = segmentsOf(s);
+  357:      const journey = [];
+  359:        const st = byId.get(seg.streamId);
+  382:export async function readSession(sessionId) {
+  383:  const session = await get("sessions", sessionId);
+  385:  const segs = segmentsOf(session);
+  386:  const streamIds = [...new Set(segs.map((s) => s.streamId))];
+  387:  const streams = {};
+  389:    const meta = await get("streams", sid);
+  391:    const db = await openDb();
+  392:    const t = tx(db, ["chunks"], "readonly");
+  393:    const range = IDBKeyRange.bound([sid, -Infinity], [sid, Infinity]);
+  394:    const chunks = await reqDone(t.objectStore("chunks").getAll(range));
+  401:export async function deleteSession(sessionId) {
+  402:  const payload = await readSession(sessionId);
+  403:  const db = await openDb();
+  406:      const t = tx(db, ["chunks", "streams"], "readwrite");
+  407:      const range = IDBKeyRange.bound([sid, -Infinity], [sid, Infinity]);
+  412:  const t2 = tx(db, ["sessions"], "readwrite");
+./benchmark/harness.py (262 lines)
+  17:from __future__ import annotations
+  18:import argparse, json, os, subprocess, sys, time
+  28:class OC:
+  31:    def __init__(self):
+  41:    def _send(self, o): self.p.stdin.write(json.dumps(o) + "\n"); self.p.stdin.flush()
+  43:    def _rpc(self, method, params):
+  55:    def call(self, name, args):
+  59:    def js(self, tab, text):
+  63:    def navigate(self, tab, url): return self.call("navigate", {"url": url, "tabId": tab})
+  64:    def tabs(self): return self.call("tabs_context_mcp", {})
+  66:    def close(self):
+  73:def _unwrap(s):
+  86:def _diff_nonempty(env_state):
+  98:def read_finish_text(oc, tab, app, timeout_s=25):
+  117:def cmd_seed(a):
+  136:def cmd_finish(a):
+  157:def _ser(x):
+  163:def _last_assistant_text(traj_path):
+  182:def _load_real_evaluator():
+  186:    import importlib.util, types
+  192:    def generate_from_model(prompt=None, model=None, **k):
+  197:        import requests  # noqa: F401
+  200:    def _load(modname, path):
+  209:def cmd_eval(a):
+  211:    import io, contextlib
+  245:def main():
+./benchmark/build_p7_envs.py (164 lines)
+  20:import json, os, re, shutil, sys
+  71:def audit(path, text, hard):
+  78:def build_analyzed(source):
+  130:def build_recipes(source):
+./benchmark/analysis/gen_legs.py (151 lines)
+  13:import os, sys
+  14:from gen_image import load_key, generate_edit
+  15:from openai import OpenAI
+  65:def channels(leg):
+  101:def build_prompt(leg_id):
+  119:def build_baseline():
+  141:def main():
+./benchmark/analysis/build_style_bible.py (732 lines)
+  14:import os, base64
+  18:def img_src(rel):  # reference the PNG by relative URL (HTML sits one dir above analysis/img/)
+  30:def sheet_head(x, y, w=22):  # generic "this sheet has content" heading
+  33:def title_bar(x, y):
+  36:def distill_mark(x, y):  # tiny funnel = distilled recipe
+  53:def crest_glyph(ex, ey, harness, sw=1.6, sc=1.0):
+  63:def face(cx, cy, hair, ue, crest=None):
+  82:def torso(cx, cy, harness=None):  # body only; the harness logo now lives on the brow
+  87:def desk(browser, W=220):
+  105:def exam(recipe=0, distilled=False):
+  132:def binder(source, sheet=False):
+  159:def bubble(content, size):
+  186:def graded_sheet(cx=0, cy=0, sc=1.0):
+  195:def book_glyph(cx=0, cy=0, sc=1.0):
+  204:def prior_stack(kind, n=3, cx=0, cy=0):
+  209:def _quad(cx, cy, w, h, pf):
+  214:def _label(tx, ty, x2, y2, text, anchor="start", em=False):
+  222:def composite_scene():
+  309:def scene(cfg, w=220, h=224):
+  325:def swatch(inner, w=120, h=120):
+  411:def lv(inner, cap, sub):
+  424:def mini_prop(fn): return f'<g transform="translate(-120,-96)">{fn}</g>'
+  458:def matrix_html():
+  472:def pvariants_html():
+  500:def leg_best(key):
+  509:def gallery_html():
+  536:def props_html():
+  550:def comps_html():
+  565:def fp_html():
+  572:def cell_summary(cfg):
+./benchmark/analysis/build_phase_highlight.py (264 lines)
+  14:  from the dots (never touch them) - precision is secondary to legibility,
+  22:import json, math, os
+  43:def X(v): return PL + (W - PL - PR) * (v - XMIN) / (XMAX - XMIN)
+  44:def Y(v): return PT + (H - PT - PB) * (YMAX - v) / (YMAX - YMIN)
+  61:def star(cx, cy, ro, ri, n=5):
+  69:def arrow(x0, y0, x1, y1, color, width=3.2):
+  79:def axis_arrows(x0, y0, x1, y1, width=3.2, row_shift=0.0, src_standoff=True, dst_standoff=STAND):
+  103:def group_ellipse(shorts, col, label, sub, lp="above", padx=30, pady=24, contain=False):
+  126:def note(x, y, text, size=13.5, rot=-2, anchor="start", weight=800, color=NOTE):
+  131:def base_chart(title, subtitle, highlight, context=()):
+  154:def draw_arms(s, highlight, context=()):
+  173:def finish(s, name):
+./benchmark/analysis/build_ratio_charts_mpl.py (182 lines)
+  19:import json, math, os, re
+  21:import matplotlib
+  23:import matplotlib.pyplot as plt
+  24:import numpy as np
+  25:from matplotlib.transforms import blended_transform_factory
+  46:def base_and_arm_values(metric):
+  60:def ols_ln(xs, ys):
+./benchmark/analysis/build_turns_ratio_residuals.py (227 lines)
+  11:import json, math, os, re
+  35:def semilog_fit(xs, ys):
+  48:def collect(arms):
+  119:def panel(idx, p):
+./benchmark/analysis/build_report.py (477 lines)
+  11:import json, os, re, statistics, html as htmlmod
+  46:def esc(s): return htmlmod.escape(str(s))
+  48:def arm_stats(a):
+  62:def get_test(frag):
+  73:def fmt_p(p): return ("%.4f" % p).rstrip("0").rstrip(".") if p >= 0.001 else "%.4f" % p
+  76:def svg_open(w, h): return f'<svg viewBox="0 0 {w} {h}" width="100%" style="max-width:{w}px" font-family="inherit" role="img">'
+  78:def paired_dot_chart():
+  83:    def X(v): return pad_l + (w - pad_l - 18) * min(v, xmax) / xmax
+  101:def totals_chart():
+  107:    def X(v): return pad_l + (w - pad_l - 88) * min(v, xmax) / xmax
+  131:def amortization_chart():
+  136:    def X(i): return pad_l + (w - pad_l - pad_r) * i / 12.0
+  137:    def Y(v): return hgt - pad_b - (hgt - pad_t - pad_b) * min(v, ymax) / ymax
+  170:def bridge_chart():
+  179:    def panel(x0, title, val, vmax, fmt):
+  199:def accuracy_grid():
+  224:def stat_table(tests):
+  240:def _pearson(xs, ys):
+  247:def _rank(v):
+  256:def _spearman(xs, ys): return _pearson(_rank(xs), _rank(ys))
+  258:def savings_chart():
+  281:        def X(v, x0=x0): return x0 + pad_l + (pw - pad_l - 8) * min(v, xmax) / xmax
+  282:        def Y(v): return pad_t + (hgt - pad_t - pad_b) * (ymax - max(min(v, ymax), ymin)) / (ymax - ymin)
+./benchmark/analysis/build_phase7_highlight.py (200 lines)
+  24:import json, math, os, glob
+  58:def X(v): return PL + (W - PL - PR) * (v - XMIN) / (XMAX - XMIN)
+  59:def Y(v): return PT + (H - PT - PB) * (YMAX - v) / (YMAX - YMIN)
+  75:def arrow(x0, y0, x1, y1, color, width=3.2):
+  85:def axis_arrows(x0, y0, x1, y1, width=3.2, row_shift=0.0):
+  96:def note(x, y, text, size=13.5, rot=-2, anchor="start", weight=800, color=NOTE):
+  102:def diamond(cx, cy, r):
+./benchmark/analysis/build_capstone.py (1249 lines)
+  5:import json, os, statistics, html as HH
+  26:def _remap(o):
+  154:def arm_registry_html():
+  576:const D = {json.dumps(D)};
+  577:const A = D.arms, ORDER = D.order, DIFF = D.diff;
+  578:const BY = {{}}; A.forEach(a=>BY[a.id]=a);
+  580:function sv(w,h){{const s=document.createElementNS(S,'svg');s.setAttribute('viewBox',`0 0 ${{w}} ${{h}}`);s.setAttribute('width','100%');s.style.maxWidth=w+'px';return s}}
+  581:function E(n,at,tx){{const e=document.createElementNS(S,n);for(const k in at)e.setAttribute(k,at[k]);if(tx!=null)e.textContent=tx;return e}}
+  582:function tip(e,t){{e.appendChild(E('title',{{}},t));return e}}
+  585:function accChart(){{
+  598:function accGrid(){{
+  602:      const dot = c.passed ? (c.slow
+  610:function renderPerf(){{
+  657:function deltaChart(){{
+  670:function ktokChart(){{
+  681:function lawScatter(){{
+  704:function sensBar(){{
+  719:function diffScatterCtl(){{
+  724:function diffScatter2(){{
+  751:function itMode(){{
+  759:function itCtl(){{
+  765:function itemized(){{
+  841:function themeTable(){{
+  854:function themeScatter(){{
+  886:function thinkBar(){{
+  903:function turnDelta(){{
+  919:function turnScale(){{
+  945:function scaleCtl(ctlId,sel,redraw){{
+  951:function lengthScale(){{
+  980:function slopeChart(){{
+  1008:  function place(items,yfn,key){{const so=[...items].sort((p,q)=>yfn(p)-yfn(q));let last=-1e9;
+  1023:function rankScatter(){{
+  1060:function ovCtl(kind,ctlId){{
+  1066:function ovDraw(kind){{
+  1092:function accDots(){{
+  1105:function initDist(){{ovCtl('lat','ov_lat_ctl');ovDraw('lat');ovCtl('turns','ov_turns_ctl');ovDraw('turns');ovCtl('acc','ov_acc_ctl');accDots();}}
+  1106:function reliabilityScatter(){{
+  1129:function landscape(){{
+  1177:function diffBars(){{
+  1202:function census(){{
+  1210:function csort(k){{if(sk===k)sd*=-1;else{{sk=k;sd=-1}}census()}}
+  1211:function openD(html){{document.getElementById('detailbody').innerHTML=html;document.getElementById('detail').classList.add('open')}}
+  1212:function showArm(id){{const a=BY[id];
+  1218:function showTask(t){{
+  1228:import re as _re
+  1233:def _legdesc(a):
+./benchmark/analysis/build_lengthscale_avgsplit_logx.py (160 lines)
+  8:import json, math, os, re
+  30:def linfit(xs, ys):
+  42:def pooled_xy(arms):
+  77:def X(v): return PL + (W - PL - PR) * (math.log(max(v, XLO)) - math.log(XLO)) / (math.log(xmax) - math.log(XLO))
+  78:def Y(v): return PT + (H - PT - PB) * (ymax - v) / (ymax - ymin)
+  80:def fit_path(b0, b1):
+./benchmark/analysis/build_scalar_p7.py (183 lines)
+  20:import json, math, os, glob
+  61:def X(v): return PL + (W - PL - PR) * (v - XMIN) / (XMAX - XMIN)
+  62:def Y(v): return PT + (H - PT - PB) * (YMAX - v) / (YMAX - YMIN)
+  72:def star(cx, cy, ro, ri, n=5):
+  81:def diamond(cx, cy, r):
+./benchmark/analysis/build_ratio_decay.py (160 lines)
+  12:import json, math, os, re
+  35:def semilog_fit(xs, ys):
+  48:def pooled_xy(arms):
+  84:def X(v): return PL + (W - PL - PR) * v / xmax
+  85:def Y(v): return PT + (H - PT - PB) * (math.log(YHI) - math.log(max(v, YLO))) / (math.log(YHI) - math.log(YLO))
+  87:def fit_path(b0, b1, x0, x1):
+  115:def top_tick(x, col, big):
+./benchmark/analysis/build_turns_ratio_decay.py (155 lines)
+  12:import json, math, os, re
+  35:def semilog_fit(xs, ys):
+  48:def pooled_xy(arms):
+  82:def X(v): return PL + (W - PL - PR) * v / xmax
+  83:def Y(v): return PT + (H - PT - PB) * (math.log(YHI) - math.log(max(v, YLO))) / (math.log(YHI) - math.log(YLO))
+  85:def fit_path(b0, b1, x0, x1):
+  112:def top_tick(x, col, big):
+./benchmark/analysis/build_deep_dive.py (667 lines)
+  8:import json, os, statistics, html as HH
+  34:def q(v, p):
+  85:def _decomp(arm):
+  296:const D = __PAYLOAD__;
+  298:const A = D.arms, T = D.order;
+  299:const S = 'http://www.w3.org/2000/svg';
+  302:function svgEl(w,h){const s=document.createElementNS(S,'svg');s.setAttribute('viewBox',`0 0 ${w} ${h}`);s.setAttribute('width','100%');s.style.maxWidth=w+'px';return s}
+  303:function el(n,at,txt){const e=document.createElementNS(S,n);for(const k in at)e.setAttribute(k,at[k]);if(txt!=null)e.textContent=txt;return e}
+  304:function tip(e,t){e.appendChild(el('title',{},t));return e}
+  306:function renderToggles(){
+  318:function chartTurnsOut(){
+  335:function chartKtok(){
+  348:function chartScatter(){
+  371:function chartSeries(){
+  391:function chartBox(){
+  412:function chartTasks(){
+  440:function chartCats(){
+  465:function catTable(){
+  481:function taskIndex(){
+  494:function showTask(t){
+  511:function chartTierBenefit(){
+  532:function chartDiffScatter(){
+  562:function chartFlips(){
+  576:function rhoTable(){
+  581:function chartWaterfall(){
+  610:function chartTurnsCmp(){
+  629:function chartCtxCurve(){
+  657:function renderAll(){chartCtxCurve();chartTurnsOut();chartKtok();chartScatter();chartSeries();chartBox();chartTasks();chartCats();catTable();chartTierBenefit();chartDiffScatter();chartFlips();rhoTable();chartWaterfall();chartTurnsCmp();}
+./benchmark/analysis/build_composite.py (156 lines)
+  6:import os
+  10:def quad(cx, cy, w, h, p):
+  16:def fork(x, y, s=1):
+  21:def house(x, y, s=1):
+  25:def headers(x, y, s=1):
+  28:def label(tx, ty, x2, y2, text, anchor="start", em=False):
+./benchmark/analysis/build_thinking_ratio_decay.py (153 lines)
+  15:import json, math, os, re
+  33:def semilog_fit(xs, ys):
+  46:def pooled_xy(arms):
+  80:def X(v): return PL + (W - PL - PR) * v / xmax
+  81:def Y(v): return PT + (H - PT - PB) * (math.log(YHI) - math.log(max(v, YLO))) / (math.log(YHI) - math.log(YLO))
+  83:def fit_path(b0, b1, x0, x1):
+  110:def top_tick(x, col, big):
+./benchmark/analysis/build_report_v2.py (602 lines)
+  12:import json, os, random, statistics, html as H
+  41:def arm_summary(a):
+  63:def paired_evidence(a, b, metric="run_s", scale=1/60.0):
+  79:def stat_p(frag):
+  186:def slope_chart(a, b, w=330, hgt=300, title=""):
+  192:    def Y(v): return pad_t + (hgt - pad_t - pad_b) * (1 - v / vmax)
+  210:def ladder_chart():
+  218:    def X1(v): return pad_l + half * min(v, fmax) / fmax
+  219:    def X2(v): return pad_l + half + 26 + (half - 26) * min(v, pmax) / pmax
+  238:def scatter_turns_time():
+  244:    def X(v): return pl + (w - pl - pr) * v / xmax
+  245:    def Y(v): return hgt - pb - (hgt - pt - pb) * v / ymax
+  271:def focus_table():
+  284:def ev_table(ids, note=""):
+  443:from the cuisine carousel; the rubric wants the curated collection rows. No harness, prior, or delivery mode touches it:
+  490:const DATA = {json.dumps(DATA)};
+  491:const CELLS = {matrix_js_cells};
+  492:const fmt = (x, d=1) => x == null ? "·" : x.toFixed(d);
+  495:function renderMatrix() {{
+  496:  const m = document.getElementById("matrix");
+  498:  const names = {{raw: "raw mount", analysis: "analysis mount", fork: "forked session"}};
+  502:      const a = CELLS[dlv][fam], s = DATA.arms[a];
+  514:function renderToggles() {{
+  515:  const bar = document.getElementById("togglebar");
+  517:    const s = DATA.arms[a];
+  522:function tgArm(a, on) {{ on ? ON.add(a) : ON.delete(a); renderGrid(); }}
+  523:function renderGrid() {{
+  524:  const arms = Object.keys(DATA.arms).filter(a => ON.has(a));
+  528:    const row = DATA.tasks[t];
+  531:      const c = row.arms[a];
+  542:const CENSUS_COLS = [["label","arm",0],["passed","pass",1],["run_min","12-run min",1],["mean_task","m/task",1],
+  545:function renderCensus() {{
+  546:  const arms = Object.values(DATA.arms).slice().sort((x,y) => {{
+  547:    const a = x[sortKey], b = y[sortKey];
+  561:function sortBy(k) {{ if (sortKey === k) sortDir *= -1; else {{ sortKey = k; sortDir = -1; }} renderCensus(); }}
+  564:function openDetail(html) {{
+  568:function closeDetail() {{ document.getElementById("detail").classList.remove("open"); }}
+  569:function showTask(t) {{
+  570:  const row = DATA.tasks[t];
+  575:    const c = row.arms[a], s = DATA.arms[a];
+  582:function showArm(a) {{
+  583:  const s = DATA.arms[a];
+  588:    const c = DATA.tasks[t].arms[a];
+./benchmark/analysis/harvest.py (171 lines)
+  18:import json, os, re, statistics, sys
+  46:def parse_ts(v):
+  52:            import datetime as dt
+  58:def traj_metrics(path, since_ts=None, run_start=None):
+  111:def steps_and_ec_from_log(arm):
+  113:    import glob
+./benchmark/analysis/build_lengthscale_avgsplit.py (176 lines)
+  20:import json, os, re
+  43:def linfit(xs, ys):
+  55:def pooled_xy(arms):
+  93:def X(v): return PL + (W - PL - PR) * v / xmax
+  94:def Y(v): return PT + (H - PT - PB) * (ymax - v) / (ymax - ymin)
+  95:def Yc(v): return Y(max(YFLOOR, v))
+./benchmark/runner.py (1594 lines)
+  24:from __future__ import annotations
+  26:import argparse
+  27:import datetime
+  28:import json
+  29:import os
+  30:import re
+  31:import shutil
+  32:import signal
+  33:import subprocess
+  34:import sys
+  35:import tarfile
+  36:import time
+  40:from harness import OC, read_finish_text, _diff_nonempty, _load_real_evaluator  # noqa: E402
+  116:def _phase2_header(prior):
+  167:def _phase3_header(prior):
+  170:def _phase3_silent_header(prior):
+  267:def _p4_fork_header(prior_line):
+  411:def load_recipe(kind, app, recipe_dir=None):
+  613:def populate_experience(workdir, kind, log):
+  636:def now(): return time.time()
+  638:def ts(): return datetime.datetime.now().strftime("%H:%M:%S")
+  640:class Log:
+  641:    def __init__(self, path):
+  645:    def __call__(self, msg):
+  650:def write_json(path, obj):
+  655:def child_env():
+  663:def claude_json(prompt, extra_args=None, timeout=ROLLOUT_TIMEOUT_S, cwd=None,
+  691:def throttled(*texts):
+  694:def throttle_wait_s(*texts):
+  714:def _tab_attachable(oc, tab):
+  723:def ocic_fresh_tab(oc, app_url):
+  741:def ocic_close_tab(oc, tab):
+  751:def ocic_seed(oc, tab, app_url, run_id, task_id, log):
+  772:def ocic_capture_finish(oc, tab, app_url, out_path):
+  792:def cinc_orch_call(prompt, timeout=300):
+  799:def cinc_seed(app_url, run_id, task_id, log):
+  826:def cinc_ensure_tab(app_url, log, force_new=False):
+  859:def cinc_seed_parity(tab, app_url, run_id, task_id, log):
+  887:def cinc_capture_finish_parity(tab, app_url, out_path, run_id):
+  920:def cinc_capture_finish(app_url, out_path, run_id):
+  953:def find_transcript(session_id, timeout_s=30):
+  964:def trajectory_stats(path):
+  990:def evaluate(task_id, env_state, model_response):
+  995:        def judge(prompt="", model=None, **kw):
+  1009:    import io, contextlib
+  1032:def run_rollout(exp_name, exp, task, idx, total, log, buffer_s):
+  1257:def cmd_run(a):
+  1299:def cmd_preflight(_a):
+  1301:    def chk(name, fn):
+  1316:    def _tabs():
+  1324:    import urllib.request
+  1339:def _tab_ids(oc):
+  1346:def cmd_p4study(a):
+  1483:def cmd_p5warmup(a):
+  1568:def main():
+./benchmark/run_p7_distill.py (190 lines)
+  28:import argparse, json, os, subprocess, sys, time
+  129:def child_env():
+  137:def run(name, job, timeout):
+./REAL/src/agisdk/REAL/browsergym/webclones/task_config.py (203 lines)
+  5:import json
+  6:from typing import List, Dict, Any
+  7:import requests
+  8:import os
+  10:from typing import Dict, Any, Optional
+  11:from dataclasses import dataclass, asdict
+  18:class Eval:
+  38:    def to_json(self) -> Dict[str, Any]:
+  46:class Task:
+  67:    def to_json(self) -> Dict[str, Any]:
+  74:class TaskConfig:
+  75:    def __init__(self, id: str) -> None:
+  98:    def load_from_id(self, id: str) -> Dict[str, Any]:
+  109:    def from_json_file(self, file_path: str) -> Dict[str, Any]:
+  119:    def to_json(self) -> Dict[str, Any]:
+  126:    def get_task_id(self) -> str:
+  133:    def get_start_url(self) -> str:
+  140:    def get_goal(self) -> str:
+  147:    def get_evals(self) -> str:
+  154:    def is_task_url_reachable(self):
+  161:    def is_valid_config(self) -> bool:
+  181:    def get_evaluation_type(self) -> str:
+  188:    def get_reference_answer(self) -> str:
+  195:    def get_expected_value(self) -> str:
+./REAL/src/agisdk/REAL/browsergym/webclones/base.py (214 lines)
+  1:import os
+  2:import json
+  3:import urllib.parse
+  4:import requests
+  5:import logging
+  7:import playwright.sync_api
+  8:from agisdk.REAL.browsergym.core.task import AbstractBrowserTask
+  9:from agisdk.REAL.browsergym.webclones.task_config import TaskConfig
+  10:from agisdk.REAL.browsergym.webclones.evaluate import WebCloneEvaluator
+  14:def get_run_id_from_api(api_key: str, model_id_name: str, run_name: str):
+  52:class AbstractWebCloneTask(AbstractBrowserTask):
+  58:    def get_task_id(cls):
+  61:    def __init__(self, seed: int, task_id: str, run_id: str = None, api_key: str = None, model_id_name: str = None, run_name: str = None) -> None:
+  138:    def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
+  150:    def teardown(self) -> None:
+  154:    def get_finish_json(self, timeout: int = 1000) -> dict:
+  179:    def validate(
+  207:                    import urllib.parse
+./REAL/src/agisdk/REAL/browsergym/experiments/loop.py (952 lines)
+  1:import gzip
+  2:import importlib.metadata
+  3:import json
+  4:import logging
+  5:import os
+  6:import pickle
+  7:import re
+  8:import sys
+  9:import time
+  10:import traceback
+  11:import uuid
+  12:from abc import ABC, abstractmethod
+  13:from collections import defaultdict
+  14:from dataclasses import asdict, dataclass, field, is_dataclass
+  15:from datetime import datetime
+  16:from pathlib import Path
+  17:from typing import Optional
+  19:import gymnasium as gym
+  20:import numpy as np
+  21:from PIL import Image
+  22:from tqdm import tqdm
+  24:from agisdk.REAL.browsergym.core.chat import Chat
+  26:from .agent import Agent
+  27:from .utils import count_messages_token, count_tokens
+  33:class EnvArgs:
+  47:    def make_env(self, action_mapping, exp_dir):
+  76:class AbstractAgentArgs(ABC):
+  81:    def __post_init__(self):
+  85:    def prepare(self):
+  89:    def close(self):
+  94:    def make_agent(self) -> Agent:
+  98:def save_package_versions(exp_dir: Path):
+  112:class ExpArgs:
+  157:    def prepare(self, exp_root):
+  183:    def _make_dir(self, exp_root):
+  199:    def run(self):
+  324:    def _set_logger(self):
+  340:    def _unset_logger(self):
+  346:class StepTimestamps:
+  357:class StepInfo:
+  398:    def from_step(self, env: gym.Env, action: str, obs_preprocessor: callable):
+  415:    def from_action(self, agent: Agent):
+  424:    def from_reset(self, env: gym.Env, seed: int, obs_preprocessor: callable):
+  439:    def is_done(self):
+  442:    def make_stats(self):
+  461:    def save_step_info(self, exp_dir, save_json=False, save_screenshot=True, save_som=False, save_pkl=True):
+  505:def _extract_err_msg(episode_info: list[StepInfo]):
+  518:def _aggregate_episode_stats(episode_info: list[StepInfo]):
+  547:def _save_summary_info(
+  670:def _is_debugging():
+  675:class ExpResult:
+  694:    def __init__(self, exp_dir) -> None:
+  704:    def exp_args(self) -> ExpArgs:
+  712:    def get_step_info(self, step: int) -> StepInfo:
+  744:    def steps_info(self) -> list[StepInfo]:
+  753:    def summary_info(self) -> dict:
+  762:    def get_screenshot(self, step: int, som=False) -> Image:
+  774:    def get_screenshots(self, som=False):
+  784:    def screenshots(self):
+  788:    def screenshots_som(self):
+  792:    def flat_exp_args(self) -> dict:
+  800:    def get_exp_record(self) -> dict:
+  814:    def chat_video_path(self) -> Path:
+  821:    def task_video_path(self) -> Path:
+  828:    def combined_video_path(self) -> Path:
+  832:    def logs(self):
+  841:def get_exp_result(exp_dir) -> ExpResult:
+  851:def yield_all_exp_results(
+  881:class DataclassJSONEncoder(json.JSONEncoder):
+  882:    def default(self, obj):
+  894:def _move_old_exp(exp_dir):
+  901:def _get_env_name(task_name: str):
+  914:        import agisdk.REAL.browsergym.webclones
+  923:def _send_chat_info(chat: Chat, action: str, agent_info: dict):
+  941:def _flatten_dict(d, parent_key="", sep="."):
+./REAL/src/agisdk/REAL/browsergym/core/action/functions.py (610 lines)
+  3:import playwright.sync_api
+  4:from typing import Literal
+  6:from .utils import (
+  25:def send_msg_to_user(text: str):
+  35:def report_infeasible(reason: str):
+  45:def noop(wait_ms: float = 1000):
+  57:def fill(bid: str, value: str):
+  83:def check(bid: str):
+  102:def uncheck(bid: str):
+  121:def select_option(bid: str, options: str | list[str]):
+  142:def click(
+  167:def dblclick(
+  192:def hover(bid: str):
+  215:def press(bid: str, key_comb: str):
+  237:def focus(bid: str):
+  250:def clear(bid: str):
+  263:def drag_and_drop(from_bid: str, to_bid: str):
+  284:def scroll(delta_x: float, delta_y: float):
+  296:def mouse_move(x: float, y: float):
+  310:def mouse_up(x: float, y: float, button: Literal["left", "middle", "right"] = "left"):
+  327:def mouse_down(x: float, y: float, button: Literal["left", "middle", "right"] = "left"):
+  344:def mouse_click(x: float, y: float, button: Literal["left", "middle", "right"] = "left"):
+  360:def mouse_dblclick(x: float, y: float, button: Literal["left", "middle", "right"] = "left"):
+  375:def mouse_drag_and_drop(from_x: float, from_y: float, to_x: float, to_y: float):
+  399:def keyboard_press(key: str):
+  420:def keyboard_up(key: str):
+  438:def keyboard_down(key: str):
+  455:def keyboard_type(text: str):
+  472:def keyboard_insert_text(text: str):
+  486:def goto(url: str):
+  497:def go_back():
+  508:def go_forward():
+  519:def new_tab():
+  534:def tab_close():
+  555:def tab_focus(index: int):
+  569:def upload_file(bid: str, file: str | list[str]):
+  591:def mouse_upload_file(x: float, y: float, file: str | list[str]):
+./REAL/src/agisdk/REAL/browsergym/core/action/highlevel.py (345 lines)
+  1:import inspect
+  2:import random
+  4:from dataclasses import dataclass
+  5:from typing import Literal, Optional
+  7:from . import utils
+  8:from .base import AbstractActionSet
+  9:from .functions import (
+  45:from .parsers import highlevel_action_parser, action_docstring_parser
+  95:class HighLevelAction:
+  102:class HighLevelActionSet(AbstractActionSet):
+  106:    def __init__(
+  169:import playwright.sync_api
+  170:from typing import Literal
+  223:    def example_action(self, abstract: bool, max_examples: int = 3) -> str:
+  256:    def describe(self, with_long_description: bool = True, with_examples: bool = True):
+  303:    def to_python_code(self, action):
+./REAL/src/agisdk/REAL/browsergym/core/action/utils.py (274 lines)
+  1:import playwright.sync_api
+  2:from typing import Literal
+  5:def get_elem_by_bid(
+  51:def highlight_by_box(
+  62:const overlay = document.createElement('div');
+  80:const waveInterval = setInterval(() => {{
+  95:def smooth_move_visual_cursor_to(
+  134:            const centerX = window.innerWidth / 2;
+  135:            const centerY = window.innerHeight / 2;
+  172:        const cursorInterval = setInterval(() => {
+  203:def check_for_overlay(
+  228:                const el = document.elementFromPoint({x}, {y});
+  240:def add_demo_mode_effects(
+./REAL/src/agisdk/REAL/browsergym/core/observation.py (558 lines)
+  1:import base64
+  2:import io
+  3:import logging
+  4:import numpy as np
+  5:import playwright.sync_api
+  6:import PIL.Image
+  7:import pkgutil
+  8:import re
+  10:from typing import Literal
+  12:from .constants import BROWSERGYM_ID_ATTRIBUTE as BID_ATTR
+  13:from .constants import BROWSERGYM_VISIBILITY_ATTRIBUTE as VIS_ATTR
+  14:from .constants import BROWSERGYM_SETOFMARKS_ATTRIBUTE as SOM_ATTR
+  22:class MarkingError(Exception):
+  26:def _pre_extract(
+  38:    def mark_frames_recursive(frame, frame_bid: str):
+  76:def _post_extract(page: playwright.sync_api.Page):
+  105:def extract_screenshot(page: playwright.sync_api.Page):
+  145:def extract_data_items_from_aria(string: str, with_warning: bool = True):
+  162:def extract_dom_snapshot(
+  205:def pop_bids_from_attribute(dom_snapshot, attr: str):
+  241:def extract_dom_extra_properties(dom_snapshot):
+  242:    def to_string(idx):
+  404:def extract_all_frame_axtrees(page: playwright.sync_api.Page):
+  477:def extract_merged_axtree(page: playwright.sync_api.Page):
+  525:def extract_focused_element_bid(page: playwright.sync_api.Page):
+  530:    function getActiveElement(root) {
+  531:        const active_element = root.activeElement;
+./REAL/src/agisdk/REAL/browsergym/core/javascript/frame_mark_elements.js (295 lines)
+  9:    const html_tags = new Set([
+  24:    const set_of_marks_tags = new Set([
+  61:        const elem = elements[i];
+  200:        const start_time = Date.now();
+  206:        const wait = setInterval(() => {
+  219:function whoCapturesCenterClick(element){
+  235:function push_bid_to_attribute(bid, elem, attr){
+  244:function elementFromPoint(x, y) {
+  259:class IFrameIdGenerator {
+  266:      const r = [];
+  281:        const val = ++this._nextId[i];
+./REAL/src/agisdk/REAL/browsergym/core/env.py (728 lines)
+  1:import copy
+  2:import logging
+  3:import os
+  4:import re
+  5:import shutil
+  6:import tempfile
+  7:import time
+  8:import json
+  9:from abc import ABC
+  10:from pathlib import Path
+  11:from typing import Literal, Optional, Union
+  13:import gymnasium as gym
+  14:import numpy as np
+  15:import playwright.sync_api
+  17:from . import _get_global_playwright
+  18:from .action.base import execute_python_code
+  19:from .action.openai_cua import execute_openai_cua_action
+  20:from .action.highlevel import HighLevelActionSet
+  21:from .chat import Chat
+  22:from .constants import BROWSERGYM_ID_ATTRIBUTE, EXTRACT_OBS_MAX_TRIES, TEXT_MAX_LENGTH
+  23:from .observation import (
+  33:from .spaces import AnyBox, AnyDict, Unicode
+  34:from .task import AbstractBrowserTask
+  39:def _try_to_extract_legacy_goal(goal: list):
+  57:class BrowserEnv(gym.Env, ABC):
+  63:    def __init__(
+  179:    def close(self):
+  193:                import shutil
+  198:    def reset(self, seed=None, *args, **kwargs):
+  211:        def override_property(task, env, property):
+  276:            import tempfile
+  277:            import shutil
+  442:    def step(self, action: Union[dict, str]) -> tuple:
+  462:        def send_message_to_user(text: str):
+  465:        def report_infeasible_instructions(reason: str):
+  598:    def _task_validate(self):
+  615:    def _wait_for_user_message(self):
+  621:    def _wait_dom_loaded(self):
+  633:    def _activate_page_from_js(self, page: playwright.sync_api.Page):
+  650:    def _active_page_check(self):
+  674:    def _get_obs(self):
+./REAL/src/agisdk/REAL/browsergym/utils/obs.py (547 lines)
+  1:import ast
+  2:import logging
+  3:import numpy as np
+  4:import PIL.Image
+  5:import PIL.ImageDraw
+  6:import PIL.ImageFont
+  7:import re
+  9:from collections import defaultdict
+  10:from bs4 import BeautifulSoup
+  12:from agisdk.REAL.browsergym.core.constants import BROWSERGYM_ID_ATTRIBUTE as BID_ATTR
+  13:from agisdk.REAL.browsergym.core.constants import BROWSERGYM_VISIBILITY_ATTRIBUTE as VIS_ATTR
+  14:from agisdk.REAL.browsergym.core.constants import BROWSERGYM_SETOFMARKS_ATTRIBUTE as SOM_ATTR
+  31:def flatten_dom_to_str(
+  47:    def to_string(idx):
+  53:    def parse_document(document_idx) -> str:
+  64:        def dfs(node_idx: int, parent_node_skipped: bool) -> str:
+  184:def _get_coord_str(coord, decimals):
+  193:def _process_bid(
+  278:def flatten_axtree_to_str(
+  302:    def dfs(node_idx: int, depth: int, parent_node_filtered: bool, parent_node_name: str) -> str:
+  424:def overlay_som(
+  438:    import math  # math has the fastest sqrt
+  440:    def linedashed(draw: PIL.ImageDraw.Draw, x0, y0, x1, y1, fill, width, dashlen=4, ratio=3):
+  525:def prune_html(html):
+./REAL/src/agisdk/REAL/harness.py (830 lines)
+  7:import os
+  8:import glob
+  9:import random
+  10:import json
+  11:import time
+  12:import logging
+  13:import tempfile
+  14:import dataclasses
+  15:from typing import List, Dict, Optional, Any, Union, Tuple, Type
+  16:from pathlib import Path
+  17:from statistics import mean, median, stdev
+  18:import multiprocessing as mp
+  19:from functools import partial
+  22:from agisdk.REAL.browsergym.experiments import Agent, AbstractAgentArgs, EnvArgs, ExpArgs, get_exp_result
+  23:from agisdk.REAL.demo_agent.basic_agent import DemoAgentArgs
+  26:def init_worker():
+  28:    import tempfile
+  32:class harness:
+  45:    def __init__(
+  150:                    from agisdk.REAL.browsergym.webclones.base import get_run_id_from_api
+  192:    def run(self, tasks: List[str] = None) -> Dict[str, Any]:
+  239:    def _format_results(self, results: Dict[str, Any]) -> None:
+  311:    def _get_tasks(
+  384:    def _run_tasks(
+  416:        import uuid
+  417:        from datetime import datetime
+  566:    def _run_single_task(
+  666:    def _find_cached_result(
+  727:    def _create_cache_key(
+  760:    def _find_experiment_dirs(self, results_dir: str) -> List[Path]:
+  785:    def _get_experiment_info(self, exp_dir: Path) -> Optional[Dict[str, Any]]:
+./REAL/src/agisdk/REAL/demo_agent/basic_agent.py (590 lines)
+  1:import base64
+  2:import dataclasses
+  3:import numpy as np
+  4:import io
+  5:import logging
+  7:from PIL import Image
+  8:from typing import Literal, Optional
+  10:from agisdk.REAL.browsergym.experiments import Agent, AbstractAgentArgs
+  11:from agisdk.REAL.browsergym.core.action.highlevel import HighLevelActionSet
+  12:from agisdk.REAL.browsergym.core.action.python import PythonActionSet
+  13:from agisdk.REAL.browsergym.utils.obs import flatten_axtree_to_str, flatten_dom_to_str, prune_html
+  18:def image_to_jpg_base64_url(image: np.ndarray | Image.Image):
+  33:class DemoAgent(Agent):
+  36:    def obs_preprocessor(self, obs: dict) -> dict:
+  48:    def close(self):
+  66:    def update_last_observation(self, obs):
+  70:    def __init__(
+  96:        from openai import OpenAI
+  97:        from anthropic import Anthropic
+  98:        import os
+  105:            def query_model(system_msgs, user_msgs):
+  146:            def query_model(system_msgs, user_msgs):
+  172:            def query_model(system_msgs, user_msgs):
+  202:            def query_model(system_msgs, user_msgs):
+  298:    def get_action(self, obs: dict) -> tuple[str, dict]:
+  541:class DemoAgentArgs(AbstractAgentArgs):
+  575:    def make_agent(self):

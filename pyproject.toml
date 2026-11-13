@@ -1,0 +1,9 @@
+# --- Line-count limits (issue: keep files small for AI-agent edits) ---
+[tool.ruff.lint]
+select = ["C901"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.pylint.format]
+max-module-lines = 250
