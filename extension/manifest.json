@@ -46,7 +46,8 @@
         "<all_urls>"
       ],
       "js": [
-        "recorder/capture.js"
+        "recorder/capture.js",
+        "recorder/capture-events.js"
       ],
       "run_at": "document_start",
       "all_frames": true
